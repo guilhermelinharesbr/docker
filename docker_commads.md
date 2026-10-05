@@ -5,6 +5,7 @@
 
 - [Definição](#definição)
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
+- [CTRL + d](#ctrl--d)
 
 
 ---
@@ -18,10 +19,13 @@ O **Docker** é uma plataforma open-source desenvolvida para facilitar a criaç�
 #### Fonte de Pesquisa
 
 - [Site oficial do Docker](https://www.docker.com/ "Site oficial do Docker")
+- [Docker Hub](https://hub.docker.com/ "Docker Hub")
 
 ---
 
-#### 
+#### CTRL + d
+
+Serve para **desatachar** do container sem matá-lo. Por trás desse atalho é enviado o comando exit.
 
 ---
 
