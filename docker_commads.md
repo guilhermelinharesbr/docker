@@ -6,6 +6,7 @@
 - [Definição](#definição)
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
+- [build](#build)
 
 
 ---
@@ -26,6 +27,25 @@ O **Docker** é uma plataforma open-source desenvolvida para facilitar a criaç�
 #### CTRL + d
 
 Serve para **desatachar** do container sem matá-lo. Por trás desse atalho é enviado o comando exit.
+
+---
+
+#### build
+
+Para “buildar” e gerar uma imagem a partir do Dockerfile.
+
+Ex:
+```bash
+docker build . -t python-ubuntu
+```
+
+Obs: No exemplo acima o **.** significa que o Dockerfile está nessa pasta. A opção **-t** é para colocar uma tag/nomear a imagem, -t vem de tag list. 
+Além disso, se não houvesse a imagem do ubuntu já baixado no host ele baixaria agora.
+
+Ex2:
+```bash
+docker build -t joomla3php8 .
+```
 
 ---
 
