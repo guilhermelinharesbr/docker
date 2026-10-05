@@ -7,6 +7,7 @@
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
 - [build](#build)
+- [pull](#pull)
 
 
 ---
@@ -32,7 +33,7 @@ Serve para **desatachar** do container sem matá-lo. Por trás desse atalho é e
 
 #### build
 
-Para “buildar” e gerar uma imagem a partir do Dockerfile.
+O **docker build** é usado ara “buildar” e gerar uma imagem a partir do Dockerfile.
 
 Ex:
 ```bash
@@ -49,6 +50,18 @@ docker build -t joomla3php8 .
 
 ---
 
+#### pull
 
+O **docker pull** extrai/baixa uma imagem ou um repositório de um registro.
 
+Ex:
+```bash
+docker pull hello-world 
+```
 
+Ex2:
+```bash
+docker pull cglinhares/my-go-app:1.0
+```
+
+---
