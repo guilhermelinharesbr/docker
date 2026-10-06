@@ -11,6 +11,7 @@
 - [pull](#pull)
 - [push](#push)
 - [version](#version)
+- [-v](#-v)
 
 
 ---
@@ -93,11 +94,24 @@ docker push cglinhares/my-go-app:1.0
 
 #### version
 
-O **docker version** mostra a versão do docker, docker engine, cliente e servidor.
+O **docker version** mostra a versão do docker, docker engine, cliente e servidor. 
+É uma maneira mais completa de informações da versão do docker, a maneira resumida é o [docker -v](#-v).
 
 Ex:
 ```bash
 docker version
+```
+
+---
+
+#### -v
+
+O **docker -v** mostra a versão docker de maneira bem resumida, litando-se a apenas uma linha.
+A maneira de ver as informações mais completas da versão do docker é o [docker version](#version).
+
+Ex:
+```bash
+docker -v
 ```
 
 ---
