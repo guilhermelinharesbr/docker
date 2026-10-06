@@ -9,6 +9,7 @@
 - [build](#build)
 - [info](#info)
 - [pull](#pull)
+- [push](#push)
 
 
 ---
@@ -74,6 +75,17 @@ docker pull hello-world
 Ex2:
 ```bash
 docker pull cglinhares/my-go-app:1.0
+```
+
+---
+
+#### push
+
+O **docker push** serve para subir uma imagem para o Docker Hub.
+
+Ex:
+```bash
+docker push cglinhares/my-go-app:1.0
 ```
 
 ---
