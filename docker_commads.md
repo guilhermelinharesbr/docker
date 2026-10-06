@@ -7,6 +7,7 @@
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
 - [build](#build)
+- [help / -h / --help](#help---h----help)
 - [info](#info)
 - [pull](#pull)
 - [push](#push)
@@ -50,6 +51,35 @@ Além disso, se não houvesse a imagem do ubuntu já baixado no host ele baixari
 Ex2:
 ```bash
 docker build -t joomla3php8 .
+```
+
+---
+
+#### help / -h / --help
+
+O **docker help** mostra as opções do comando docker.
+Ele também pode ser usado dessas outras quatro maneiras abaixo:
+
+Ex:
+```bash
+docker help
+ou
+docker -h
+ou
+docker --help
+ou
+docker
+```
+
+Obs: Se digitar apenas _docker_, é o mesmo que digitar _docker help_.
+
+Ex2. mostrando opções do subcomando de nome _ps_:
+```bash
+docker help ps
+ou
+docker ps -h
+ou
+docker ps --help
 ```
 
 ---
