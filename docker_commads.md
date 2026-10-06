@@ -9,6 +9,7 @@
 - [build](#build)
 - [help / -h / --help](#help---h----help)
 - [info](#info)
+- [ps](#ps)
 - [pull](#pull)
 - [push](#push)
 - [version](#version)
@@ -91,6 +92,50 @@ O **docker info** mostra informações de todo sistema(host), entre as informaç
 Ex:
 ```bash
 docker info
+```
+
+---
+
+#### ps
+
+O **docker ps** lista os containers.
+
+
+Este subcomando possui diversas opções, que podem ser vistas consultado com o comando:
+
+Ex:
+```bash
+docker ps --help
+```
+
+Ex2. listando os containers em execução:
+```bash
+docker ps
+```
+
+Ex3. listando todos os containers estando em execução ou não:
+```bash
+docker ps -a
+ou
+docker ps --all
+```
+
+Ex4. mostra apenas os IDs dos containers:
+```bash
+docker ps -q
+ou
+docker ps --quiet
+```
+Ex5. também é possível combinar opções. Mostrando apenas os IDs de todos os containers, estando em execução ou não:
+```bash
+docker ps -qa
+```
+
+Ex6. mostrando o tamanho dos containers, estando em execução ou não:
+```bash
+docker ps -as
+ou
+docker ps --all --size
 ```
 
 ---
