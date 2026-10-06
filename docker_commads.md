@@ -10,6 +10,7 @@
 - [info](#info)
 - [pull](#pull)
 - [push](#push)
+- [version](#version)
 
 
 ---
@@ -86,6 +87,17 @@ O **docker push** serve para subir uma imagem para o Docker Hub.
 Ex:
 ```bash
 docker push cglinhares/my-go-app:1.0
+```
+
+---
+
+#### version
+
+O **docker version** mostra a versão do docker, docker engine, cliente e servidor.
+
+Ex:
+```bash
+docker version
 ```
 
 ---
