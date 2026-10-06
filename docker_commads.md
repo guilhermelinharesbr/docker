@@ -7,6 +7,7 @@
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
 - [build](#build)
+- [info](#info)
 - [pull](#pull)
 
 
@@ -46,6 +47,17 @@ Além disso, se não houvesse a imagem do ubuntu já baixado no host ele baixari
 Ex2:
 ```bash
 docker build -t joomla3php8 .
+```
+
+---
+
+#### info
+
+O **docker info** mostra informações de todo sistema(host), entre as informações, a versão do Docker, quantos containers, quantos containers rodando, quantos containers parados, quantas imagens, versão do S.O., etc.
+
+Ex:
+```bash
+docker info
 ```
 
 ---
