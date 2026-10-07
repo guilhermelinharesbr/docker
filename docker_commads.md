@@ -10,6 +10,7 @@
 - [cp](#cp)
 - [help / -h / --help](#help---h----help)
 - [info](#info)
+- [login](#login)
 - [ps](#ps)
 - [pull](#pull)
 - [push](#push)
@@ -110,6 +111,13 @@ Ex:
 ```bash
 docker info
 ```
+
+---
+
+#### login
+
+O **docker login** serve para pedir o seu login do docker. É usado em conjunto com o [docker build](#build) e [docker push](#push). 
+Ele adiciona a credencial no arquivo /root/.docker/config.json, não sendo necessário colocar a senha em uma segunda execução do docker login.
 
 ---
 
