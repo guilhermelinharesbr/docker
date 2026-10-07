@@ -11,6 +11,7 @@
 - [help / -h / --help](#help---h----help)
 - [info](#info)
 - [login](#login)
+- [logout](#logout)
 - [ps](#ps)
 - [pull](#pull)
 - [push](#push)
@@ -117,7 +118,14 @@ docker info
 #### login
 
 O **docker login** serve para pedir o seu login do docker. É usado em conjunto com o [docker build](#build) e [docker push](#push). 
-Ele adiciona a credencial no arquivo /root/.docker/config.json, não sendo necessário colocar a senha em uma segunda execução do docker login.
+Ele adiciona a credencial no arquivo _/root/.docker/config.json_, não sendo necessário colocar a senha em uma segunda execução do docker login.
+
+---
+
+#### logout
+
+O **docker logout** serve para encerrar a seção do Docker Hub.  
+Ele exlcui as credenciais do arquivo _/root/.docker/config.json_, então na próxima vez que for preciso usar o [docker login](#login), será preciso passar usuário e senha. 
 
 ---
 
