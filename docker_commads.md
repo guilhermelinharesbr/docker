@@ -15,6 +15,8 @@
 - [ps](#ps)
 - [pull](#pull)
 - [push](#push)
+- [rm](#rm)
+- [rmi](#)
 - [version](#version)
 - [-v](#-v)
 
@@ -196,6 +198,22 @@ O **docker push** serve para subir uma imagem para o Docker Hub.
 Ex:
 ```bash
 docker push cglinhares/my-go-app:1.0
+```
+
+---
+
+#### rm
+
+O **docker rm** remova um ou mais containers.
+
+Ex. remove um containers se ele estiver parado:
+```bash
+docker rm ocsinventory 
+```
+
+Ex2. com a opção **-f** força a remoção do container, mesmo que ele esteja em execução:
+```bash
+docker rm -f ocsinventory
 ```
 
 ---
