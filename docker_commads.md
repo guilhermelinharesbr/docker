@@ -16,7 +16,7 @@
 - [pull](#pull)
 - [push](#push)
 - [rm](#rm)
-- [rmi](#)
+- [rmi](#rmi)
 - [version](#version)
 - [-v](#-v)
 
@@ -204,7 +204,7 @@ docker push cglinhares/my-go-app:1.0
 
 #### rm
 
-O **docker rm** remova um ou mais containers.
+O **docker rm** remove um ou mais containers.
 
 Ex. remove um containers se ele estiver parado:
 ```bash
@@ -214,6 +214,22 @@ docker rm ocsinventory
 Ex2. com a opção **-f** força a remoção do container, mesmo que ele esteja em execução:
 ```bash
 docker rm -f ocsinventory
+```
+
+---
+
+#### rmi
+
+O **docker rmi** remove uma ou mais imagens.
+
+Ex:
+```bash
+docker rmi node
+```
+
+Ex2. o primeiro comando feito é o de dentro do parênteses ele lista as imagens docker e depois o resultado é jogado para o comando de fora do parenteses, que ele remove as imagens não utilizadas: 
+```bash
+docker rmi $(docker image list -q)  
 ```
 
 ---
