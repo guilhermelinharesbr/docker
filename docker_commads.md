@@ -17,6 +17,7 @@
 - [push](#push)
 - [rm](#rm)
 - [rmi](#rmi)
+- [start](#start)
 - [version](#version)
 - [-v](#-v)
 
@@ -230,6 +231,19 @@ docker rmi node
 Ex2. o primeiro comando feito é o de dentro do parênteses ele lista as imagens docker e depois o resultado é jogado para o comando de fora do parenteses, que ele remove as imagens não utilizadas: 
 ```bash
 docker rmi $(docker image list -q)  
+```
+
+---
+
+#### start
+
+O **docker start** inicia um ou mais containers que estavam parados.
+
+Ex:
+```bash
+docker start 8b54c76e81b7
+ou 
+docker start ocsinventory
 ```
 
 ---
