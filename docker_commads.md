@@ -282,6 +282,8 @@ O **docker volume** é usado para os armazenamentos de dados persistentes para c
 Ex. lista os volumes docker:
 ```bash
 docker volume list
+ou
+docker volume ls
 ```
 
 Ex. exclui os volumes docker não utilizados:
