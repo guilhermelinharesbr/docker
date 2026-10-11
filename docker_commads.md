@@ -18,6 +18,7 @@
 - [rm](#rm)
 - [rmi](#rmi)
 - [start](#start)
+- [stats](#stats)
 - [version](#version)
 - [-v](#-v)
 
@@ -244,6 +245,19 @@ Ex:
 docker start 8b54c76e81b7
 ou 
 docker start ocsinventory
+```
+
+---
+
+#### stats
+
+O **docker stats** exibe um fluxo ao vivo das estatísticas de uso de recursos do(s) container(s). Por exemplo, container, uso de CPU, uso de memória, etc.
+
+Ex:
+```bash
+docker stats 8b54c76e81b7
+ou 
+docker stats ocsinventory
 ```
 
 ---
