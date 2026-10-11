@@ -284,6 +284,11 @@ Ex. lista os volumes docker:
 docker volume list
 ```
 
+Ex. exclui os volumes docker não utilizados:
+```bash
+docker volume prune
+```
+
 ---
 
 #### -v
