@@ -20,6 +20,7 @@
 - [start](#start)
 - [stats](#stats)
 - [version](#version)
+- [volume](#volume)
 - [-v](#-v)
 
 
@@ -270,6 +271,17 @@ O **docker version** mostra a versão do docker, docker engine, cliente e servid
 Ex:
 ```bash
 docker version
+```
+
+---
+
+#### volume
+
+O **docker volume** é usado para os armazenamentos de dados persistentes para containers, criados e gerenciados pelo Docker.
+
+Ex. lista os volumes docker:
+```bash
+docker volume list
 ```
 
 ---
