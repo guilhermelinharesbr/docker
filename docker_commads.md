@@ -133,7 +133,7 @@ docker ps --help
 
 É o comando original/clássico das primeiras versões do Docker. Serve para listar as imagens armazenadas localmente no seu host.
 
-Ex.:
+Ex. lista as imagens:
 ```bash
 docker images
 ```
@@ -242,7 +242,7 @@ docker push cglinhares/my-go-app:1.0
 
 O **docker rm** remove um ou mais containers.
 
-Ex. remove um containers se ele estiver parado:
+Ex. remove um container se ele estiver parado:
 ```bash
 docker rm ocsinventory 
 ```
@@ -250,6 +250,13 @@ docker rm ocsinventory
 Ex2. com a opção **-f** força a remoção do container, mesmo que ele esteja em execução:
 ```bash
 docker rm -f ocsinventory
+```
+
+Ex3. remove um container se ele estiver parado, usando o id ou parte do id:
+```bash
+docker rm 87hklerkl338924
+ou
+docker rm 87hk
 ```
 
 ---
