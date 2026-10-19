@@ -10,6 +10,7 @@
 - [container](#container)
 - [cp](#cp)
 - [help / -h / --help](#help---h----help)
+- [image](#image)
 - [images (legado)](#images-legado)
 - [info](#info)
 - [login](#login)
@@ -129,6 +130,32 @@ docker ps --help
 
 ---
 
+#### image
+
+Foi introduzido para organizar a CLI em subcomandos estruturados de acordo com os objetos do Docker (ex: docker container, docker volume, docker network, docker image).
+
+Por si só, docker image é o comando pai do grupo de gerenciamento de imagens.
+
+Se rodar apenas `docker image ls`, o resultado será exatamente igual a `docker images`.
+
+Ex. lista as imagens:
+```bash
+docker image ls
+ou
+docker image list
+```
+
+Ex2. é exibido o menu de ajuda do comando docker image: 
+```bash
+docker image
+ou 
+docker image --help
+```
+
+Obs: O comando estruturado `docker image`(junto com a reorganização da CLI baseada em objetos como docker container, docker network e docker volume) foi introduzido oficialmente no Docker 1.13.0, lançado em janeiro de 2017.
+
+---
+
 #### images (legado)
 
 É o comando original/clássico das primeiras versões do Docker. Serve para listar as imagens armazenadas localmente no seu host.
@@ -137,8 +164,6 @@ Ex. lista as imagens:
 ```bash
 docker images
 ```
-
-Obs: O comando estruturado [docker image AJUSTAR](#) (junto com a reorganização da CLI baseada em objetos como docker container, docker network e docker volume) foi introduzido oficialmente no Docker 1.13.0, lançado em janeiro de 2017.
 
 ---
 
