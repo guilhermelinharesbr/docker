@@ -10,10 +10,11 @@
 - [container](#container)
 - [cp](#cp)
 - [help / -h / --help](#help---h----help)
+- [images (legado)](#images-legado)
 - [info](#info)
 - [login](#login)
 - [logout](#logout)
-- [ps](#ps)
+- [ps (legado)](#ps-legado)
 - [pull](#pull)
 - [push](#push)
 - [rm](#rm)
@@ -76,13 +77,10 @@ docker container ls
 
 Ex2 lista os containers em execução:
 ```bash
-docker container ls
+docker container ls -a
 ```
 
 Obs: Os comandos dos Ex. e Ex2. fazem o mesmo que o [docker ps](#ps) e [docker ps -a](#ps).
-
-
-
 
 ---
 
@@ -131,6 +129,19 @@ docker ps --help
 
 ---
 
+#### images (legado)
+
+É o comando original/clássico das primeiras versões do Docker. Serve para listar as imagens armazenadas localmente no seu host.
+
+Ex.:
+```bash
+docker images
+```
+
+Obs: O comando estruturado [docker image AJUSTAR](#) (junto com a reorganização da CLI baseada em objetos como docker container, docker network e docker volume) foi introduzido oficialmente no Docker 1.13.0, lançado em janeiro de 2017.
+
+---
+
 #### info
 
 O **docker info** mostra informações de todo sistema(host), entre as informações, a versão do Docker, quantos containers, quantos containers rodando, quantos containers parados, quantas imagens, versão do S.O., etc.
@@ -156,7 +167,7 @@ Ele exlcui as credenciais do arquivo _/root/.docker/config.json_, então na pró
 
 ---
 
-#### ps
+#### ps (legado)
 
 O **docker ps** lista os containers.
 
