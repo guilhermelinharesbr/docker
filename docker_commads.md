@@ -7,6 +7,7 @@
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
 - [build](#build)
+- [container](#container)
 - [cp](#cp)
 - [help / -h / --help](#help---h----help)
 - [info](#info)
@@ -61,6 +62,27 @@ Ex2:
 ```bash
 docker build -t joomla3php8 .
 ```
+
+---
+
+#### container
+
+Comando usado para gerenciar containers.
+
+Ex. lista os containers em execução:
+```bash
+docker container ls
+```
+
+Ex2 lista os containers em execução:
+```bash
+docker container ls
+```
+
+Obs: Os comandos dos Ex. e Ex2. fazem o mesmo que o [docker ps](#ps) e [docker ps -a](#ps).
+
+
+
 
 ---
 
