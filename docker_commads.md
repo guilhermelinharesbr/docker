@@ -76,12 +76,19 @@ Ex. lista os containers em execução:
 docker container ls
 ```
 
-Ex2 lista os containers em execução:
+Ex2. lista os containers em execução:
 ```bash
 docker container ls -a
 ```
 
 Obs: Os comandos dos Ex. e Ex2. fazem o mesmo que o [docker ps](#ps) e [docker ps -a](#ps).
+
+Ex3. Mostra os processos em execução no container:
+```bash
+docker container top ocsinventory #ocsinventory é o containername
+ou
+docker container top 87hk #87hk é o containerid
+```
 
 ---
 
