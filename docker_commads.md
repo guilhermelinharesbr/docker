@@ -26,8 +26,6 @@
 - [rm (legado)](#rm-legado)
 - [rmi (legado)](#rmi-legado)
 
-- [start (legado)](#start-legado)
-
 ---
 
 #### Definição
@@ -371,19 +369,6 @@ docker rmi node
 Ex2. o primeiro comando feito é o de dentro do parênteses ele lista as imagens docker e depois o resultado é jogado para o comando de fora do parenteses, que ele remove as imagens não utilizadas: 
 ```bash
 docker rmi $(docker image list -q)  
-```
-
----
-
-#### start (legado)
-
-O **docker start** inicia um ou mais containers que estavam parados.
-
-Ex:
-```bash
-docker start 8b54c76e81b7
-ou 
-docker start ocsinventory
 ```
 
 ---
