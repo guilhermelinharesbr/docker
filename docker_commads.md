@@ -6,26 +6,27 @@
 - [Definição](#definição)
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
-- [build](#build)
 - [container](#container)
-- [cp](#cp)
 - [help / -h / --help](#help---h----help)
 - [image](#image)
-- [images (legado)](#images-legado)
 - [info](#info)
 - [login](#login)
 - [logout](#logout)
-- [ps (legado)](#ps-legado)
 - [pull](#pull)
 - [push](#push)
-- [rm](#rm)
-- [rmi](#rmi)
-- [start](#start)
 - [stats](#stats)
 - [version](#version)
 - [volume](#volume)
 - [-v](#-v)
+- [Comandos LEGADOS](#comandos-legados)
+- [build (legado)](#build-legado)
+- [cp (legado)](#cp-legado)
+- [images (legado)](#images-legado)
+- [ps (legado)](#ps-legado)
+- [rm (legado)](#rm-legado)
+- [rmi (legado)](#rmi-legado)
 
+- [start (legado)](#start-legado)
 
 ---
 
@@ -45,25 +46,6 @@ O **Docker** é uma plataforma open-source desenvolvida para facilitar a criaç�
 #### CTRL + d
 
 Serve para **desatachar** do container sem matá-lo. Por trás desse atalho é enviado o comando exit.
-
----
-
-#### build
-
-O **docker build** é usado para “buildar” e gerar uma imagem a partir do Dockerfile.
-
-Ex:
-```bash
-docker build . -t python-ubuntu
-```
-
-Obs: No exemplo acima o **.** significa que o Dockerfile está nessa pasta. A opção **-t** é para colocar uma tag/nomear a imagem, -t vem de tag list. 
-Além disso, se não houvesse a imagem do ubuntu já baixado no host ele baixaria agora.
-
-Ex2:
-```bash
-docker build -t joomla3php8 .
-```
 
 ---
 
@@ -88,22 +70,6 @@ Ex3. Mostra os processos em execução no container:
 docker container top ocsinventory #ocsinventory é o containername
 ou
 docker container top 87hk #87hk é o containerid
-```
-
----
-
-#### cp
-
-O **docker cp** é usado para copiar um arquivo que estava fora do contêiner para dentro do container, ou de dentro do container para fora.
-
-Ex. de cópia de um arquivo de _fora_ para dentro:
-```bash
-docker cp bkp_mysql docker_mysql-master_1:/usr/local/bin/
-```
-
-Ex. de cópia de um arquivo de _dentro_ para fora:
-```bash
-docker cp Ubuntu-A:/destino/MeuZip.zip  Zipcopia.zip
 ```
 
 ---
@@ -139,6 +105,8 @@ docker ps --help
 
 #### image
 
+A imagem determina o comportamento de um container.
+
 Foi introduzido para organizar a CLI em subcomandos estruturados de acordo com os objetos do Docker (ex: docker container, docker volume, docker network, docker image).
 
 Por si só, docker image é o comando pai do grupo de gerenciamento de imagens.
@@ -160,17 +128,6 @@ docker image --help
 ```
 
 Obs: O comando estruturado `docker image`(junto com a reorganização da CLI baseada em objetos como docker container, docker network e docker volume) foi introduzido oficialmente no Docker 1.13.0, lançado em janeiro de 2017.
-
----
-
-#### images (legado)
-
-É o comando original/clássico das primeiras versões do Docker. Serve para listar as imagens armazenadas localmente no seu host.
-
-Ex. lista as imagens:
-```bash
-docker images
-```
 
 ---
 
@@ -199,50 +156,6 @@ Ele exlcui as credenciais do arquivo _/root/.docker/config.json_, então na pró
 
 ---
 
-#### ps (legado)
-
-O **docker ps** lista os containers.
-
-
-Este subcomando possui diversas opções, que podem ser vistas consultado com o comando:
-
-Ex:
-```bash
-docker ps --help
-```
-
-Ex2. listando os containers em execução:
-```bash
-docker ps
-```
-
-Ex3. listando todos os containers estando em execução ou não:
-```bash
-docker ps -a
-ou
-docker ps --all
-```
-
-Ex4. mostra apenas os IDs dos containers:
-```bash
-docker ps -q
-ou
-docker ps --quiet
-```
-Ex5. também é possível combinar opções. Mostrando apenas os IDs de todos os containers, estando em execução ou não:
-```bash
-docker ps -qa
-```
-
-Ex6. mostrando o tamanho dos containers, estando em execução ou não:
-```bash
-docker ps -as
-ou
-docker ps --all --size
-```
-
----
-
 #### pull
 
 O **docker pull** extrai/baixa uma imagem ou um repositório de um registro.
@@ -266,58 +179,6 @@ O **docker push** serve para subir uma imagem para o Docker Hub.
 Ex:
 ```bash
 docker push cglinhares/my-go-app:1.0
-```
-
----
-
-#### rm
-
-O **docker rm** remove um ou mais containers.
-
-Ex. remove um container se ele estiver parado:
-```bash
-docker rm ocsinventory 
-```
-
-Ex2. com a opção **-f** força a remoção do container, mesmo que ele esteja em execução:
-```bash
-docker rm -f ocsinventory
-```
-
-Ex3. remove um container se ele estiver parado, usando o id ou parte do id:
-```bash
-docker rm 87hklerkl338924
-ou
-docker rm 87hk
-```
-
----
-
-#### rmi
-
-O **docker rmi** remove uma ou mais imagens.
-
-Ex:
-```bash
-docker rmi node
-```
-
-Ex2. o primeiro comando feito é o de dentro do parênteses ele lista as imagens docker e depois o resultado é jogado para o comando de fora do parenteses, que ele remove as imagens não utilizadas: 
-```bash
-docker rmi $(docker image list -q)  
-```
-
----
-
-#### start
-
-O **docker start** inicia um ou mais containers que estavam parados.
-
-Ex:
-```bash
-docker start 8b54c76e81b7
-ou 
-docker start ocsinventory
 ```
 
 ---
@@ -373,6 +234,156 @@ A maneira de ver as informações mais completas da versão do docker é o [dock
 Ex:
 ```bash
 docker -v
+```
+
+---
+
+### Comandos LEGADOS
+
+Com a introdução da CLI estruturada em subcomandos baseados em objetos (como docker container, docker image, docker network) a partir da versão 1.13, diversos comandos de primeiro nível passaram a ser considerados legados.
+
+Apesar de serem chamados de legados, eles continuam funcionando perfeitamente (a Docker os mantém por razões de compatibilidade com scripts e hábitos antigos).
+
+---
+
+#### build (legado)
+
+O **docker build** é usado para “buildar” e gerar uma imagem a partir do Dockerfile.
+
+Ex:
+```bash
+docker build . -t python-ubuntu
+```
+
+Obs: No exemplo acima o **.** significa que o Dockerfile está nessa pasta. A opção **-t** é para colocar uma tag/nomear a imagem, -t vem de tag list. 
+Além disso, se não houvesse a imagem do ubuntu já baixado no host ele baixaria agora.
+
+Ex2:
+```bash
+docker build -t joomla3php8 .
+```
+
+---
+
+#### cp (legado)
+
+O **docker cp** é usado para copiar um arquivo que estava fora do contêiner para dentro do container, ou de dentro do container para fora.
+
+Ex. de cópia de um arquivo de _fora_ para dentro:
+```bash
+docker cp bkp_mysql docker_mysql-master_1:/usr/local/bin/
+```
+
+Ex. de cópia de um arquivo de _dentro_ para fora:
+```bash
+docker cp Ubuntu-A:/destino/MeuZip.zip  Zipcopia.zip
+```
+
+---
+
+#### images (legado)
+
+É o comando original/clássico das primeiras versões do Docker. Serve para listar as imagens armazenadas localmente no seu host.
+
+Ex. lista as imagens:
+```bash
+docker images
+```
+
+---
+
+#### ps (legado)
+
+O **docker ps** lista os containers.
+
+
+Este subcomando possui diversas opções, que podem ser vistas consultado com o comando:
+
+Ex:
+```bash
+docker ps --help
+```
+
+Ex2. listando os containers em execução:
+```bash
+docker ps
+```
+
+Ex3. listando todos os containers estando em execução ou não:
+```bash
+docker ps -a
+ou
+docker ps --all
+```
+
+Ex4. mostra apenas os IDs dos containers:
+```bash
+docker ps -q
+ou
+docker ps --quiet
+```
+Ex5. também é possível combinar opções. Mostrando apenas os IDs de todos os containers, estando em execução ou não:
+```bash
+docker ps -qa
+```
+
+Ex6. mostrando o tamanho dos containers, estando em execução ou não:
+```bash
+docker ps -as
+ou
+docker ps --all --size
+```
+
+---
+
+#### rm (legado)
+
+O **docker rm** remove um ou mais containers.
+
+Ex. remove um container se ele estiver parado:
+```bash
+docker rm ocsinventory 
+```
+
+Ex2. com a opção **-f** força a remoção do container, mesmo que ele esteja em execução:
+```bash
+docker rm -f ocsinventory
+```
+
+Ex3. remove um container se ele estiver parado, usando o id ou parte do id:
+```bash
+docker rm 87hklerkl338924
+ou
+docker rm 87hk
+```
+
+---
+
+#### rmi (legado)
+
+O **docker rmi** remove uma ou mais imagens.
+
+Ex:
+```bash
+docker rmi node
+```
+
+Ex2. o primeiro comando feito é o de dentro do parênteses ele lista as imagens docker e depois o resultado é jogado para o comando de fora do parenteses, que ele remove as imagens não utilizadas: 
+```bash
+docker rmi $(docker image list -q)  
+```
+
+---
+
+#### start (legado)
+
+O **docker start** inicia um ou mais containers que estavam parados.
+
+Ex:
+```bash
+docker start 8b54c76e81b7
+ou 
+docker start ocsinventory
 ```
 
 ---
