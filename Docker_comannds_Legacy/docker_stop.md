@@ -11,7 +11,7 @@
 
 ### Descrição
 
-O **docker stop** 
+O **docker stop** faz com que o processo principal dentro do container receberá um sinal SIGTERM e, após um período de tolerância, um sinal SIGKILL. O primeiro sinal pode ser alterado com a instrução STOPSIGNAL no Dockerfile do container ou com a opção --stop-signal nos comandos docker run e docker create.
 
 
 ---

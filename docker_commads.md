@@ -22,7 +22,6 @@
 - [build (legado)](#build-legado)
 - [cp (legado)](#cp-legado)
 - [images (legado)](#images-legado)
-- [ps (legado)](#ps-legado)
 - [rm (legado)](#rm-legado)
 - [rmi (legado)](#rmi-legado)
 
@@ -286,50 +285,6 @@ docker cp Ubuntu-A:/destino/MeuZip.zip  Zipcopia.zip
 Ex. lista as imagens:
 ```bash
 docker images
-```
-
----
-
-#### ps (legado)
-
-O **docker ps** lista os containers.
-
-
-Este subcomando possui diversas opções, que podem ser vistas consultado com o comando:
-
-Ex:
-```bash
-docker ps --help
-```
-
-Ex2. listando os containers em execução:
-```bash
-docker ps
-```
-
-Ex3. listando todos os containers estando em execução ou não:
-```bash
-docker ps -a
-ou
-docker ps --all
-```
-
-Ex4. mostra apenas os IDs dos containers:
-```bash
-docker ps -q
-ou
-docker ps --quiet
-```
-Ex5. também é possível combinar opções. Mostrando apenas os IDs de todos os containers, estando em execução ou não:
-```bash
-docker ps -qa
-```
-
-Ex6. mostrando o tamanho dos containers, estando em execução ou não:
-```bash
-docker ps -as
-ou
-docker ps --all --size
 ```
 
 ---

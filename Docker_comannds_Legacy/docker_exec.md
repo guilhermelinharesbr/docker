@@ -56,7 +56,5 @@ docker exec meu-ubuntu echo "Eu gosto de usar Docker"
 ou
 docker exec 87hk echo "Eu gosto de usar Docker" #87hk é o começo do ID do container
 ```
---
-
 
 ---
