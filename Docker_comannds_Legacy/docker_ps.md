@@ -24,9 +24,9 @@ docker **container ls** [OPTIONS]
 
 ### Apelidos
 	
-docker **container list**
-docker **container ps**
-docker **ps**
+- docker **container list**
+- docker **container ps**
+- docker **ps**
 
 ---
 

@@ -46,4 +46,16 @@ ou
 docker stop 87hk #87hk é o começo do ID do container
 ```
 
+--
+
+Ex2 :
+```bash
+docker stop -t 0 meu-ubuntu
+ou
+docker stop -t0 meu-ubuntu
+# Faz com que o container pare imediatamente, ou seja em 0 segundos 
+```
+
+Obs: Geralmente o docker demora uns 10 segundos para parar o container de maneira segura.
+
 ---

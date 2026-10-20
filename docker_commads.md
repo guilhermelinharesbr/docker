@@ -6,7 +6,6 @@
 - [Definição](#definição)
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
-- [container](#container)
 - [help / -h / --help](#help---h----help)
 - [image](#image)
 - [info](#info)
@@ -20,9 +19,6 @@
 - [Comandos LEGADOS](#comandos-legados)
 - [build (legado)](#build-legado)
 - [cp (legado)](#cp-legado)
-- [images (legado)](#images-legado)
-- [rm (legado)](#rm-legado)
-- [rmi (legado)](#rmi-legado)
 
 ---
 
@@ -42,31 +38,6 @@ O **Docker** é uma plataforma open-source desenvolvida para facilitar a criaç�
 #### CTRL + d
 
 Serve para **desatachar** do container sem matá-lo. Por trás desse atalho é enviado o comando exit.
-
----
-
-#### container
-
-Comando usado para gerenciar containers.
-
-Ex. lista os containers em execução:
-```bash
-docker container ls
-```
-
-Ex2. lista os containers em execução:
-```bash
-docker container ls -a
-```
-
-Obs: Os comandos dos Ex. e Ex2. fazem o mesmo que o [docker ps](#ps) e [docker ps -a](#ps).
-
-Ex3. Mostra os processos em execução no container:
-```bash
-docker container top ocsinventory #ocsinventory é o containername
-ou
-docker container top 87hk #87hk é o containerid
-```
 
 ---
 
@@ -257,56 +228,6 @@ docker cp bkp_mysql docker_mysql-master_1:/usr/local/bin/
 Ex. de cópia de um arquivo de _dentro_ para fora:
 ```bash
 docker cp Ubuntu-A:/destino/MeuZip.zip  Zipcopia.zip
-```
-
----
-
-#### images (legado)
-
-É o comando original/clássico das primeiras versões do Docker. Serve para listar as imagens armazenadas localmente no seu host.
-
-Ex. lista as imagens:
-```bash
-docker images
-```
-
----
-
-#### rm (legado)
-
-O **docker rm** remove um ou mais containers.
-
-Ex. remove um container se ele estiver parado:
-```bash
-docker rm ocsinventory 
-```
-
-Ex2. com a opção **-f** força a remoção do container, mesmo que ele esteja em execução:
-```bash
-docker rm -f ocsinventory
-```
-
-Ex3. remove um container se ele estiver parado, usando o id ou parte do id:
-```bash
-docker rm 87hklerkl338924
-ou
-docker rm 87hk
-```
-
----
-
-#### rmi (legado)
-
-O **docker rmi** remove uma ou mais imagens.
-
-Ex:
-```bash
-docker rmi node
-```
-
-Ex2. o primeiro comando feito é o de dentro do parênteses ele lista as imagens docker e depois o resultado é jogado para o comando de fora do parenteses, que ele remove as imagens não utilizadas: 
-```bash
-docker rmi $(docker image list -q)  
 ```
 
 ---
