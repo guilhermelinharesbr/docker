@@ -12,7 +12,6 @@
 - [info](#info)
 - [login](#login)
 - [logout](#logout)
-- [pull](#pull)
 - [push](#push)
 - [stats](#stats)
 - [version](#version)
@@ -150,22 +149,6 @@ Ele adiciona a credencial no arquivo _/root/.docker/config.json_, não sendo nec
 
 O **docker logout** serve para encerrar a seção do Docker Hub.  
 Ele exlcui as credenciais do arquivo _/root/.docker/config.json_, então na próxima vez que for preciso usar o [docker login](#login), será preciso passar usuário e senha. 
-
----
-
-#### pull
-
-O **docker pull** extrai/baixa uma imagem ou um repositório de um registro.
-
-Ex:
-```bash
-docker pull hello-world 
-```
-
-Ex2:
-```bash
-docker pull cglinhares/my-go-app:1.0
-```
 
 ---
 
