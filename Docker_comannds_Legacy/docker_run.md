@@ -71,16 +71,16 @@ docker run ubuntu ls
 
 Ex5. Executa/baixa o container que tem a imagem do ubuntu, já entrando no modo interativo e em um pseudo terminal, ao sair do container ele é finalizado:
 ```bash
-docker run -ti ubuntu
+docker run -it ubuntu
 ou
-docker run -t -i ubuntu
+docker run -i -t ubuntu
 ```
 
 --
 
 Ex6. Executa/baixa o container que tem a imagem do ubuntu, colocando o nome no container de meu-ubuntu, já entrando no modo interativo e em um pseudo terminal, ao sair do container ele é finalizado:
 ```bash
-docker run --name meu-ubuntu -ti ubuntu
+docker run --name meu-ubuntu -it ubuntu
 ```
 
 --

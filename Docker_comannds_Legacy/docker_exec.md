@@ -49,3 +49,13 @@ As opções podem ser vistas por meio do comando `docker exec --help` sendo elas
 ---
 
 ### Exemplos
+
+Ex. Executa o container de nome meu-ubuntu e exibi em tela a mensagem do comando echo:
+```bash
+docker exec meu-ubuntu echo "Eu gosto de usar Docker"
+docker exec 87hk echo "Eu gosto de usar Docker" #87hk é o começo do ID do conatiner
+```
+--
+
+
+---
