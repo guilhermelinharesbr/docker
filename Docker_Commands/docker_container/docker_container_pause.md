@@ -12,6 +12,8 @@
 
 O **docker container pause** suspende todos os processos nos containers especificados. No Linux, isso utiliza o cgroup `freezer`. Tradicionalmente, ao suspender um processo, o sinal `SIGSTOP` é utilizado, o qual é observável pelo processo que está sendo suspenso. Com o cgroup `freezer`, o processo não tem conhecimento, e não consegue capturar, que está sendo suspenso e posteriormente retomado. No Windows, apenas containers Hyper-V podem ser pausados.
 
+Ao voltar do estado de _paused_ o container mantém todos os processos que já estavam em execução, diferente de quando volta do estado _stopped_, pois os processos são todos encerrados.
+
 ---
 
 ### Sintaxe

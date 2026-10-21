@@ -36,6 +36,8 @@ As opções podem ser vistas por meio do comando `docker container run --help` s
 - **-d**, **--detach** -> Executa o container em segundo plano e imprime o ID do container.
 - **-i**, **--interactive** -> Mantém a entrada STDIN aberta mesmo que não esteja conectada.
 - **--name** string -> Atribui um nome ao container.
+- **-p**, **--publish** -> Publica porta de um container para o host. O Administrador define a porta.
+- **-P**, **--publish-all** -> Publica todas as portas expostas em portas aleatórias. O Docker define a porta.
 - **-t**, **--tty** -> Aloca um pseudo terminal.
 
 
@@ -92,5 +94,19 @@ docker container run -di ubuntu
 ```
 
 Obs: Para entrar nele basta rodar `docker exec -it [containerID/containerName] bash`. 
+
+--
+
+Ex8. Baixando a imagem de nome static-site do usuário dockersmaples já deixando o container desatachado e com uma porta exposta aleatória:
+```bash
+docker container run -P -d dockersamples/static-site
+```
+
+--
+
+Ex9. Baixando a imagem de nome static-site do usuário dockersmaples já deixando o container desatachado e com uma porta exposta de número 5000 e dentro do container ela é a 80:
+```bash
+docker container run -p 5000:80 -d dockersamples/static-site
+```
 
 ---

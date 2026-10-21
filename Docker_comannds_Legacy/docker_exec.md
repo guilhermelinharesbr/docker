@@ -56,5 +56,32 @@ docker exec meu-ubuntu echo "Eu gosto de usar Docker"
 ou
 docker exec 87hk echo "Eu gosto de usar Docker" #87hk é o começo do ID do container
 ```
+--
+
+Ex2. Executa o container de nome meu-ubuntu e roda nele um apt update:
+```bash
+docker exec -it meu-ubuntu apt update
+```
+
+--
+
+Ex3. Executa o container de nome meu-ubuntu e instala nele o pacote stress:
+```bash
+docker exec -it meu-ubuntu apt install stress
+```
+
+--
+
+Ex4. Executa o container de nome meu-ubuntu e consulta o menu de ajuda do comando stress:
+```bash
+docker exec -it meu-ubuntu stress --help
+```
+
+--
+
+Ex5. Executa o container de nome meu-ubuntu e consulta o consumo de cpu e ram dele via comando top:
+```bash
+docker exec -it meu-ubuntu top
+```
 
 ---

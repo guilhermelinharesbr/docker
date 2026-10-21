@@ -4,9 +4,11 @@
 - [Descrição](#descrição)
 - [Subcomandos](#subcomandos)
     - [container create](./docker_container/docker_ccontainer_create.md)
+    - [container exec](./docker_container/docker_container_exec.md)
     - [container kill](./docker_container/docker_container_kill.md)
     - [container ls](./docker_container/docker_container_ls.md)
     - [container pause](./docker_container/docker_container_pause.md)
+    - [container port](./docker_container/docker_container_port.md)
     - [container prune](./docker_container/docker_container_prune.md)
     - [container rename](./docker_container/docker_container_rename.md)
     - [container restart](./docker_container/docker_container_restart.md)
@@ -27,6 +29,6 @@ O **docker container** serve para gerenciar containers.
 
 ### Subcomandos
 
-O comando docker container possuei diversos subcomandos, que podem ser visto nas subpasta [docker_container](./docker_container/) deste repositório.
+O comando docker container possui diversos subcomandos, que podem ser vistos na subpasta [docker_container](./docker_container/) deste repositório.
 
 ---
