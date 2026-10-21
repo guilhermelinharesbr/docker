@@ -109,4 +109,11 @@ Ex9. Baixando a imagem de nome static-site do usuário dockersmaples já deixand
 docker container run -p 5000:80 -d dockersamples/static-site
 ```
 
+--
+
+Ex10. Baixando a imagem de nome static-site do usuário dockersmaples já deixando o container desatachado e com uma porta exposta de número 7000 e dentro do container ela é a 80, e passando a variável de ambiente AUTHOR:
+```bash
+docker container run -p 7000:80 -d -e AUTHOR="Guilherme" dockersamples/static-site
+```
+
 ---
