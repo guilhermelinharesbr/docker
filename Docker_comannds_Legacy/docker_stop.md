@@ -13,6 +13,7 @@
 
 O **docker stop** faz com que o processo principal dentro do container receberá um sinal SIGTERM e, após um período de tolerância, um sinal SIGKILL. O primeiro sinal pode ser alterado com a instrução STOPSIGNAL no Dockerfile do container ou com a opção --stop-signal nos comandos docker run e docker create.
 
+O tempo limite padrão pode ser especificado usando a opção `--stop-timeout` do comando `docker create`. Se nenhum valor padrão for configurado para o container, o Daemon determinará o padrão, que é de _10 segundos para containers Linux_ e _30 segundos para containers Windows_.
 
 ---
 

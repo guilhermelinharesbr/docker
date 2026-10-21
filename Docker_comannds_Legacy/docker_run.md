@@ -91,6 +91,6 @@ Ex7. Executa/baixa o container que tem a imagem do ubuntu, deixando ele desatach
 docker run -di ubuntu
 ```
 
-Obs: Para entrar nele basta rodar `docker exec -it [conatinerID/containerName] bash`. 
+Obs: Para entrar nele basta rodar `docker exec -it [containerID/containerName] bash`. 
 
 ---
