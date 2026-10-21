@@ -35,8 +35,9 @@ As opções podem ser vistas por meio do comando `docker run --help` sendo elas:
 
 - **-d**, **--detach** -> Executa o container em segundo plano e imprime o ID do container.
 - **-i**, **--interactive** -> Mantém a entrada STDIN aberta mesmo que não esteja conectada.
-- **-t**, **--tty** -> Aloca um pseudo terminal.
 - **--name** string -> Atribui um nome ao container.
+- **-t**, **--tty** -> Aloca um pseudo terminal.
+
 
 ---
 
