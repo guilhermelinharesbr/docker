@@ -1,10 +1,10 @@
-# Docker CONTAINER
+# Docker IMAGE
 
 ### Sumário
 - [Descrição](#descrição)
 - [Subcomandos](#subcomandos)
-    - [image history](./docker_container/docker_ccontainer_create.md)
-    - [image ls](./docker_container/docker_container_exec.md)
+    - [image history](./docker_image/docker_image_history.md)
+    - [image ls](./docker_image/docker_image_ls.md)
 
 
 ---
