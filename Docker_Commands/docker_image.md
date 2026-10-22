@@ -5,6 +5,7 @@
 - [Subcomandos](#subcomandos)
     - [image history](./docker_image/docker_image_history.md)
     - [image ls](./docker_image/docker_image_ls.md)
+    - [image pull](./docker_image/docker_image_pull.md)
 
 
 ---

@@ -62,4 +62,11 @@ Ex3:
 docker pull cglinhares/my-go-app:1.0
 ```
 
+--
+
+Ex4:
+```bash
+docker pull grafana/grafana
+```
+
 ---
