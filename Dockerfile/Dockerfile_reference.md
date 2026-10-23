@@ -5,6 +5,7 @@
 - [Instruções](#instruções)
 - [Formato](#formato)
 - [Nomenclatura](#nomenclatura)
+- [Vantagens](#vantagens)
 - [Boas Práticas](#boas-práticas)
 
 ---
@@ -81,6 +82,14 @@ Outra forma menos comum de nomear um Dockerfile é colocar o **nome_imagem.docke
 
 ---
 
+### Vantagens
+
+- Bem mais prático que usar o docker commit
+- Controle de versão
+- Colaboração da equipe
+- Legibilidade
+
+---
 
 ### Boas Práticas
 
