@@ -45,10 +45,15 @@ As opções podem ser vistas por meio do comando `docker build --help` sendo ela
 
 Ex:
 ```bash
-docker build -t meu-app-python:v1
-
+# O "." no final do comando indica que o Dockerfile está com o nome padrão e está no diretório atual:
+docker build -t meu-app-python:v1 .
 ```
 
 --
+
+Ex2. Fazendo build de com um Dockerfile com nome fora do padrão:
+```bash
+docker build -t meu-app-python:v1 -f banco.dockerfile
+```
 
 ---
