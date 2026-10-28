@@ -34,6 +34,7 @@ docker **run**
 As opções podem ser vistas por meio do comando `docker container run --help` sendo elas:
 
 - **-d**, **--detach** -> Executa o container em segundo plano e imprime o ID do container.
+- **-e**, **--env** -> Define variáveis ​​de ambiente.
 - **-i**, **--interactive** -> Mantém a entrada STDIN aberta mesmo que não esteja conectada.
 - **--name** string -> Atribui um nome ao container.
 - **-p**, **--publish** -> Publica porta de um container para o host. O Administrador define a porta.
@@ -120,7 +121,14 @@ docker container run -p 7000:80 -d -e AUTHOR="Guilherme" dockersamples/static-si
 
 Ex11. Baixando a imagem de nome card-business do usuário cglinhares com a tag 1.0, já deixando o container uma porta exposta de número 8080 e dentro do container ela é a 8080:
 ```bash
-docker run -dit -p 8080:8080 cglinhares/card-business:1.0
+docker container run -dit -p 8080:8080 cglinhares/card-business:1.0
+```
+
+--
+
+Ex12. Baixando a imagem de nome card-business do usuário cglinhares com a tag 1.0, já deixando o container uma porta exposta de número 8080 e dentro do container ela é a 8080, acresentando variáveis de ambiente e um nome para o container:
+```bash
+docker container run -dit -p 8080:8080 -e NOME="Guilherme" -e IDADE="20" -e EMAIL="guilherme@dominio.com.br" --name container-cardbusiness cglinhares/card-business:1.0
 ```
 
 ---
