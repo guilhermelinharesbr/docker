@@ -59,4 +59,11 @@ ou
 docker container rm 87hk
 ```
 
+--
+
+Ex4. remove todos os containers:
+```bash
+docker container rm -f $(docker container ls -aq)
+```
+
 ---

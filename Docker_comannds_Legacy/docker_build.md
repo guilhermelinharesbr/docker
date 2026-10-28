@@ -56,4 +56,11 @@ Ex2. Fazendo build de com um Dockerfile com nome fora do padrão:
 docker build -t meu-app-python:v1 -f banco.dockerfile
 ```
 
+--
+
+Ex3. Fazendo build de com um Dockerfile com o usuário do Docker Hub:
+```bash
+docker build -t cglinhares/card-business:1.0 .
+```
+
 ---
