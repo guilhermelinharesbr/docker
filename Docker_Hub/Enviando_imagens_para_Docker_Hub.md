@@ -31,7 +31,8 @@ cat ~/.docker/config.json
 # Enviando a imagem para o Docker Hub:
 docker image push cglinhares/card-business:1.0
 
-
+# Agora já é possível baixar do Docker Hub:
+docker image pull cglinhares/card-business:1.0
 
 # Deslogando, sempre fazer isso por segurança:
 docker logout
