@@ -2,7 +2,7 @@
 
 ### Sumário
 - [Descrição](#descrição)
-- [Exemplos](#exemplos)
+- [Prática](#prática)
 
 
 ---
@@ -13,7 +13,7 @@
 
 ---
 
-### Exemplos
+### Prática
 
 Comandos:
 
