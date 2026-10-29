@@ -24,25 +24,15 @@ docker **volume ls**
 
 As opções podem ser vistas por meio do comando `docker volume ls --help` sendo elas:
 
-- **-q**, **--quiet** -> Mostra apenas os container IDs.
-
+- **-q**, **--quiet** -> Mostra apenas os nomes dos volumes.
 
 ---
 
 ### Exemplos
 
-Ex. lista os containers em execução:
+Ex. lista os volumes:
 ```bash
-docker container ls
+docker volume ls
 ```
-
---
-
-Ex2. lista os containers estando em execução ou não:
-```bash
-docker container ls -a
-```
-
-Obs: Os comandos dos Ex. e Ex2. fazem o mesmo que o `docker ps` e `docker ps -a`.
 
 ---
