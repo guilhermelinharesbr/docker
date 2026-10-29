@@ -3,7 +3,11 @@
 ### Sumário
 - [Descrição](#descrição)
 - [Subcomandos](#subcomandos)
+    - [volume create](./docker_volume/docker_volume_create.md)
+    - [volume inspect](./docker_volume/docker_volume_inspect.md)
     - [volume ls](./docker_volume/docker_volume_ls.md)
+    - [volume prune](./docker_volume/docker_volume_prune.md)
+    - [volume rm](./docker_volume/docker_volume_rm.md)
 - [Opções](#opções)
 
 ---
