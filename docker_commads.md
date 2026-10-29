@@ -7,11 +7,7 @@
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
 - [help / -h / --help](#help---h----help)
-- [image](#image)
 - [info](#info)
-- [login](#login)
-- [logout](#logout)
-- [push](#push)
 - [stats](#stats)
 - [version](#version)
 - [volume](#volume)
@@ -70,34 +66,6 @@ docker ps --help
 
 ---
 
-#### image
-
-A imagem determina o comportamento de um container.
-
-Foi introduzido para organizar a CLI em subcomandos estruturados de acordo com os objetos do Docker (ex: docker container, docker volume, docker network, docker image).
-
-Por si só, docker image é o comando pai do grupo de gerenciamento de imagens.
-
-Se rodar apenas `docker image ls`, o resultado será exatamente igual a `docker images`.
-
-Ex. lista as imagens:
-```bash
-docker image ls
-ou
-docker image list
-```
-
-Ex2. é exibido o menu de ajuda do comando docker image: 
-```bash
-docker image
-ou 
-docker image --help
-```
-
-Obs: O comando estruturado `docker image`(junto com a reorganização da CLI baseada em objetos como docker container, docker network e docker volume) foi introduzido oficialmente no Docker 1.13.0, lançado em janeiro de 2017.
-
----
-
 #### info
 
 O **docker info** mostra informações de todo sistema(host), entre as informações, a versão do Docker, quantos containers, quantos containers rodando, quantos containers parados, quantas imagens, versão do S.O., etc.
@@ -105,31 +73,6 @@ O **docker info** mostra informações de todo sistema(host), entre as informaç
 Ex:
 ```bash
 docker info
-```
-
----
-
-#### login
-
-O **docker login** serve para pedir o seu login do docker. É usado em conjunto com o [docker build](#build) e [docker push](#push). 
-Ele adiciona a credencial no arquivo _/root/.docker/config.json_, não sendo necessário colocar a senha em uma segunda execução do docker login.
-
----
-
-#### logout
-
-O **docker logout** serve para encerrar a seção do Docker Hub.  
-Ele exlcui as credenciais do arquivo _/root/.docker/config.json_, então na próxima vez que for preciso usar o [docker login](#login), será preciso passar usuário e senha. 
-
----
-
-#### push
-
-O **docker push** serve para subir uma imagem para o Docker Hub.
-
-Ex:
-```bash
-docker push cglinhares/my-go-app:1.0
 ```
 
 ---

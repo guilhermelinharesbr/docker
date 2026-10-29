@@ -12,6 +12,8 @@
 
 O **docker logout** serve encerrar sessão no registry. Se nenhum servidor for especificado, o padrão será definido pelo daemon.
 
+Ele exlcui as credenciais do arquivo _/root/.docker/config.json_, então na próxima vez que for preciso usar o **docker login**, será preciso passar usuário e senha. 
+
 ---
 
 ### Sintaxe

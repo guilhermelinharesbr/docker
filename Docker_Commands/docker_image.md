@@ -16,6 +16,8 @@
 
 O **docker image** serve para gerenciar imagens.
 
+Obs: O comando estruturado `docker image`(junto com a reorganização da CLI baseada em objetos como docker container, docker network e docker volume) foi introduzido oficialmente no Docker 1.13.0, lançado em janeiro de 2017.
+
 ---
 
 ### Subcomandos
