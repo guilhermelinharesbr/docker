@@ -37,6 +37,7 @@ As opções podem ser vistas por meio do comando `docker run --help` sendo elas:
 - **-e**, **--env** -> Define variáveis ​​de ambiente.
 - **-i**, **--interactive** -> Mantém a entrada STDIN aberta mesmo que não esteja conectada.
 - **--mount** -> Anexa um filesystem mount ao container.
+    - subparâmetro **type** -> Ex: docker run -dit **--mount type**=tmpfs,destination=/meu-app --name cont-tmpfs-mount ubuntu
 - **--name** string -> Atribui um nome ao container.
 - **-t**, **--tty** -> Aloca um pseudo terminal.
 - **-v**, **--volume** -> Monta um volume.

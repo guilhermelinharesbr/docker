@@ -7,7 +7,7 @@ Mestre:
 - https://www.linkedin.com/in/lucasandradear/
 
 
-Aulas - **26/36**
+Aulas - **27/36**
 
 ---
 
