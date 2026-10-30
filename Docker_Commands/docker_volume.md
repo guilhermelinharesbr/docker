@@ -16,6 +16,8 @@
 
 O **docker volume** é o comando usado para gerenciar os volumes do Docker.
 
+O diretório padrão dos volumes docker é **/var/lib/docker/volumes/**.
+
 ---
 
 ### Opções
