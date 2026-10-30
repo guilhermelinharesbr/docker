@@ -10,7 +10,6 @@
 - [info](#info)
 - [stats](#stats)
 - [version](#version)
-- [volume](#volume)
 - [-v](#-v)
 - [Comandos LEGADOS](#comandos-legados)
 - [build (legado)](#build-legado)
@@ -98,24 +97,6 @@ O **docker version** mostra a versão do docker, docker engine, cliente e servid
 Ex:
 ```bash
 docker version
-```
-
----
-
-#### volume
-
-O **docker volume** é usado para os armazenamentos de dados persistentes para containers, criados e gerenciados pelo Docker.
-
-Ex. lista os volumes docker:
-```bash
-docker volume list
-ou
-docker volume ls
-```
-
-Ex. exclui os volumes docker não utilizados:
-```bash
-docker volume prune
 ```
 
 ---

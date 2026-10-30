@@ -3,6 +3,7 @@
 ### Sumário
 - [Descrição](#descrição)
 - [Sintaxe](#sintaxe)
+- [Apelido](#apelido)
 - [Opções](#opções)
 - [Exemplos](#exemplos)
 
@@ -20,6 +21,12 @@ docker **volume ls**
 
 ---
 
+### Apelido
+
+- docker **volume list**
+
+---
+
 ### Opções
 
 As opções podem ser vistas por meio do comando `docker volume ls --help` sendo elas:
@@ -33,6 +40,11 @@ As opções podem ser vistas por meio do comando `docker volume ls --help` sendo
 Ex. lista os volumes:
 ```bash
 docker volume ls
+```
+
+Ex2:
+```bash
+docker volume list
 ```
 
 ---
