@@ -36,10 +36,12 @@ As opções podem ser vistas por meio do comando `docker container run --help` s
 - **-d**, **--detach** -> Executa o container em segundo plano e imprime o ID do container.
 - **-e**, **--env** -> Define variáveis ​​de ambiente.
 - **-i**, **--interactive** -> Mantém a entrada STDIN aberta mesmo que não esteja conectada.
+- **--mount** -> Anexa um filesystem mount ao container.
 - **--name** string -> Atribui um nome ao container.
 - **-p**, **--publish** -> Publica porta de um container para o host. O Administrador define a porta.
 - **-P**, **--publish-all** -> Publica todas as portas expostas em portas aleatórias. O Docker define a porta.
 - **-t**, **--tty** -> Aloca um pseudo terminal.
+- **-v**, **--volume** -> Monta um volume.
 
 
 ---
