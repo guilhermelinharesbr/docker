@@ -14,6 +14,15 @@
 
 O **docker network** gerencia redes. Pode-se usar subcomandos para criar, inspecionar, listar, remover, limpar, conectar e desconectar redes.
 
+Por padrão, o docker disponibiliza três redes:
+- bridge
+- host
+- none
+
+O Docker por padrão gerencia os IPs, provendo a comunicação entre os containers, sendo eles já criados na rede bridge, essa informações podem ser pegue via comando [docker inspect](./docker_inspect.md) na sessão de Networks.
+
+O primeiro container docker criado tende a receber o IP 172.17.0.2, com a exclusão deste primeiro container, outros poderão receber este mesmo IP.
+
 ---
 
 ### Subcomandos
