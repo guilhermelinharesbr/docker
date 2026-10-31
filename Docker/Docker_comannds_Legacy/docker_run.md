@@ -15,6 +15,8 @@ O **docker run** executa um comando em um novo container, baixando a imagem se n
 
 Pode-se reiniciar um container parado, mantendo todas as alterações anteriores, usando `docker start`.
 
+Cria e inicia um novo container a partir de uma imagem especificada. Ele combina as operações `docker create` e `docker start`, oferecendo uma variedade de opções para personalizar o ambiente de execução do container.
+
 ---
 
 ### Sintaxe
