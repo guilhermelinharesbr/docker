@@ -55,7 +55,7 @@ CMD ["localhost"]
 ### Prática
 
 
-![entrypoint_ubuntu.png](./images/Entrypoint/entrypoint_ubuntu.png)
+![entrypoint_ubuntu.png](/Docker/images/Entrypoint/entrypoint_ubuntu.png)
 
 Mostrando como mudar o comando padrão:
 

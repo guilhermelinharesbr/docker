@@ -19,18 +19,18 @@
 
 #### Componentes
 
-![Components-Docker.png](./images/Arquitetura/components-docker.png)
+![Components-Docker.png](/Docker/images/Arquitetura/components-docker.png)
 
 ---
 
 #### Tecnologias do ecossistema Docker
 
-![tecnologias-do-ecossistema-docker.png](./images/Arquitetura/tecnologias-do-ecossistema-docker.png)
+![tecnologias-do-ecossistema-docker.png](/Docker/images/Arquitetura/tecnologias-do-ecossistema-docker.png)
 
 ---
 
 #### Ciclo de vida Docker
 
-![ciclo_de_vida_docker.png](./images/Arquitetura/ciclo_de_vida_docker.png)
+![ciclo_de_vida_docker.png](/Docker/images/Arquitetura/ciclo_de_vida_docker.png)
 
 ---

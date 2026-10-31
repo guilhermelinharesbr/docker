@@ -16,7 +16,7 @@ Neste artigo será mostrado como migrar uma aplicação local para um container 
 
 Escopo do desafio:
 
-![migrando_app_nodejs_para_container.png](/images/Tutoriais/Migracao_para_container/migrando_app_nodejs_para_container.png)
+![migrando_app_nodejs_para_container.png](/Docker/images/Tutoriais/Migracao_para_container/migrando_app_nodejs_para_container.png)
 
 Repositório do projeto:
 https://github.com/techeducabr/curso-docker-essencial-user-registration
