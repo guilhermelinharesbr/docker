@@ -110,4 +110,63 @@ docker run -dit -p 3000:3000 --name cont-app-node meu-app-node
 docker container ls -a
 ```
 
+--
+
+Focando agora em otimizar o uso da rede no projeto, por meio do docker network.
+
+Editando o app.dockerfile:
+```dockerfile
+# vim app.dockerfile
+# Obs: Removida a linha: "ARG MONGO=$MONGOIP"
+# Obs2: Editada a linha: "ENV MONGODB=meu-mongodb"
+FROM node:20.3.0-alpine3.18
+WORKDIR /app
+ENV MONGODB=meu-mongodb
+EXPOSE 3000
+COPY package-lock.json .
+COPY package.json .
+RUN npm install
+COPY . .
+CMD [ "node", "app.js" ]
+```
+
+Editando o mongo-express.dockerfile:
+```dockerfile
+# vim mongo-express.dockerfile
+# Obs: Removida a linha: "ARG MONGO=$MONGOIP"
+# Obs2: Editada a linha: "ENV ME_CONFIG_MONGODB_SERVER=meu-mongodb"
+FROM mongo-express:0.54
+EXPOSE 8081
+ENV ME_CONFIG_MONGODB_SERVER=meu-mongodb
+ENV ME_CONFIG_MONGODB_PORT=27017
+```
+
+Voltando para os comandos:
+```bash
+# Fazendo o build do mongodb novamente:
+docker image build -t meu-mongodb:v1 -f mongodb.dockerfile .
+
+# Fazendo o build do mongo-express novamente:
+docker image build -t meu-mongo-express:v1 -f mongo-express.dockerfile .
+
+# Fazendo o build do app novamente:
+docker image build -t meu-app-node:v1 -f app.dockerfile .
+
+docker image ls
+
+# Criando a rede para os containers se comunicarem por nome:
+docker network create --driver bridge minha-rede
+# Obs: Criada a rede de nome minha-rede com o driver em modo bridge.
+docker network ls
+
+docker container run -dit --name meu-mongodb -p 27017:27017 --network minha-rede --mount source=volume-teste,target=/data/db meu-mongodb:v1
+
+docker container run -dit --name meu-mongo-express -p 8081:8081 --network minha-rede meu-mongo-express:v1
+
+docker container run -dit --name meu-app-node -p 3000:3000 --network minha-rede meu-app-node:v1
+
+docker container ls -a
+```
+
+
 ---
