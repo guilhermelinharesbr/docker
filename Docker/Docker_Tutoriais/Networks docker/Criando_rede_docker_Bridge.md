@@ -1,4 +1,4 @@
-# Criando uma Rede docker 
+# Criando uma Rede docker BRIDGE
 
 ### Sumário
 - [Descrição](#descrição)
@@ -14,10 +14,8 @@ Neste artigo será mostrado como criar uma rede docker por meio do comando [dock
 
 ### Prática
 
-Por padrão o docker disponibiliza três redes, a bridge, a host e a none. 
+Por padrão o docker disponibiliza três redes, a _bridge_, a host e a none. 
 Os containers se comunicam via rede em modo bridge.
-
-Escopo do desafio:
 
 Mostrando a comunicação básica de dois containers:
 ```bash
