@@ -47,6 +47,7 @@ Ex:
 ```bash
 # O "." no final do comando indica que o Dockerfile está com o nome padrão e está no diretório atual:
 docker build -t meu-app-python:v1 .
+# Obs: docker build -t <image_name> <path>
 ```
 
 --

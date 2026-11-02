@@ -23,8 +23,8 @@ Mostrando a comunicação básica de dois containers:
 ```bash
 docker image pull alpine
 
-docker run -dit --name cont-1 alpine
-docker run -dit --name cont-2 alpine
+docker container run -dit --name cont-1 alpine
+docker container run -dit --name cont-2 alpine
 
 # Descobrindo os IPs dos containers:
 docker inspect cont-1
