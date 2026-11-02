@@ -3,7 +3,9 @@
 ### Sumário
 - [Descrição](#descrição)
 - [Subcomandos](#subcomandos)
+    - [network connect](./docker_network/docker_network_connect.md)
     - [network create](./docker_network/docker_network_create.md)
+    - [network disconnect](./docker_network/docker_network_disconnect.md)
     - [network inspect](./docker_network/docker_network_inspect.md)
     - [network ls](./docker_network/docker_network_ls.md)
     - [network rm](./docker_network/docker_network_rm.md)

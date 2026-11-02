@@ -41,6 +41,9 @@ As opções podem ser vistas por meio do comando `docker run --help` sendo elas:
 - **--mount** -> Anexa um filesystem mount ao container.
     - subparâmetro **type** -> Ex: docker run -dit **--mount type**=tmpfs,destination=/meu-app --name cont-tmpfs-mount ubuntu
 - **--name** string -> Atribui um nome ao container.
+- **--network** -> Conecta um container a uma rede.
+- **-p**, **--publish** -> Publica porta de um container para o host. O Administrador define a porta.
+- **-P**, **--publish-all** -> Publica todas as portas expostas em portas aleatórias. O Docker define a porta.
 - **-t**, **--tty** -> Aloca um pseudo terminal.
 - **-v**, **--volume** -> Monta um volume.
 
