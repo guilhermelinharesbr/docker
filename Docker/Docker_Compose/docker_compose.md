@@ -5,7 +5,7 @@
 - [Instalação](#instalação)
 - [docker-compose standalone (legado)](#docker-compose-standalone-legadoo)
 - [Subcomandos](#subcomandos)
-    - [compose down](#compose-down)
+    - [compose down](Subcommands/docker_compose_down.md)
     - [compose up](#compose-up)
     - [compose version](#compose-version)
 
@@ -65,10 +65,6 @@ A **diferença** principal entre **docker-compose** (com hífen) e **docker comp
 ### Subcomandos
 
 O comando docker compose possui diversos subcomandos, que podem ser vistos mais abaixo neste artigo.
-
----
-
-#### compose down
 
 ---
 
