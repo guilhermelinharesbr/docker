@@ -6,8 +6,8 @@
 - [docker-compose standalone (legado)](#docker-compose-standalone-legadoo)
 - [Subcomandos](#subcomandos)
     - [compose down](Subcommands/docker_compose_down.md)
-    - [compose up](#compose-up)
-    - [compose version](#compose-version)
+    - [compose up](Subcommands/docker_compose_up.md)
+    - [compose version](Subcommands/docker_compose_version.md)
 
 ---
 
@@ -64,21 +64,6 @@ A **diferença** principal entre **docker-compose** (com hífen) e **docker comp
 
 ### Subcomandos
 
-O comando docker compose possui diversos subcomandos, que podem ser vistos mais abaixo neste artigo.
-
----
-
-#### compose up
-
----
-
-#### compose version
-
-Para exibir a versão do docker compose. Também usado para verificar se ele está instalado.
-
-Ex:
-```bash
-docker compose version
-```
+O comando docker compose possui diversos subcomandos, que podem ser vistos na subpasta [Docker_Compose](Subcommands/) deste repositório.
 
 ---

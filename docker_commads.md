@@ -7,7 +7,6 @@
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
 - [help / -h / --help](#help---h----help)
-- [info](#info)
 - [stats](#stats)
 - [version](#version)
 - [-v](#-v)
@@ -61,17 +60,6 @@ ou
 docker ps -h
 ou
 docker ps --help
-```
-
----
-
-#### info
-
-O **docker info** mostra informações de todo sistema(host), entre as informações, a versão do Docker, quantos containers, quantos containers rodando, quantos containers parados, quantas imagens, versão do S.O., etc.
-
-Ex:
-```bash
-docker info
 ```
 
 ---
