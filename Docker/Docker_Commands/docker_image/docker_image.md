@@ -3,11 +3,12 @@
 ### Sumário
 - [Descrição](#descrição)
 - [Subcomandos](#subcomandos)
-    - [image history](./docker_image/docker_image_history.md)
-    - [image ls](./docker_image/docker_image_ls.md)
-    - [image pull](./docker_image/docker_image_pull.md)
-    - [image push](./docker_image/docker_image_push.md)
-    - [image rm](./docker_image/docker_image_rm.md)
+    - [image build](Subcommands/docker_image_build.md)
+    - [image history](Subcommands/docker_image_history.md)
+    - [image ls](Subcommands/docker_image_ls.md)
+    - [image pull](Subcommands/docker_image_pull.md)
+    - [image push](Subcommands/docker_image_push.md)
+    - [image rm](Subcommands/docker_image_rm.md)
 
 
 ---
@@ -22,6 +23,6 @@ Obs: O comando estruturado `docker image`(junto com a reorganização da CLI bas
 
 ### Subcomandos
 
-O comando docker image possui diversos subcomandos, que podem ser vistos na subpasta [docker_image](./docker_image/) deste repositório.
+O comando docker image possui diversos subcomandos, que podem ser vistos na subpasta [docker_image](Subcommands/) deste repositório.
 
 ---

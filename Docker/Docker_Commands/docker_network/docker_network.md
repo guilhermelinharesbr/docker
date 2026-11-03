@@ -3,12 +3,12 @@
 ### Sumário
 - [Descrição](#descrição)
 - [Subcomandos](#subcomandos)
-    - [network connect](./docker_network/docker_network_connect.md)
-    - [network create](./docker_network/docker_network_create.md)
-    - [network disconnect](./docker_network/docker_network_disconnect.md)
-    - [network inspect](./docker_network/docker_network_inspect.md)
-    - [network ls](./docker_network/docker_network_ls.md)
-    - [network rm](./docker_network/docker_network_rm.md)
+    - [network connect](Subcommands/docker_network_connect.md)
+    - [network create](Subcommands/docker_network_create.md)
+    - [network disconnect](Subcommands/docker_network_disconnect.md)
+    - [network inspect](Subcommands/docker_network_inspect.md)
+    - [network ls](Subcommands/docker_network_ls.md)
+    - [network rm](Subcommands/docker_network_rm.md)
 
 ---
 
@@ -29,6 +29,6 @@ O primeiro container docker criado tende a receber o IP 172.17.0.2, com a exclus
 
 ### Subcomandos
 
-O comando docker network possui diversos subcomandos, que podem ser vistos na subpasta [docker_network](./docker_network/) deste repositório.
+O comando docker network possui diversos subcomandos, que podem ser vistos na subpasta [docker_network](Subcommands/) deste repositório.
 
 ---

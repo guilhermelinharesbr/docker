@@ -3,8 +3,8 @@
 ### Sumário
 - [Descrição](#descrição)
 - [Subcomandos](#subcomandos)
-    - [system df](./docker_system/docker_system_df.md)
-    - [system info](./docker_system/docker_system_info.md)
+    - [system df](Subcommands/docker_system_df.md)
+    - [system info](Subcommands/docker_system_info.md)
 
 ---
 
@@ -16,6 +16,6 @@ O **docker system** gerencia o Docker.
 
 ### Subcomandos
 
-O comando docker system possui diversos subcomandos, que podem ser vistos na subpasta [docker_system](./docker_system/) deste repositório.
+O comando docker system possui diversos subcomandos, que podem ser vistos na subpasta [docker_system](Subcommands/) deste repositório.
 
 ---
