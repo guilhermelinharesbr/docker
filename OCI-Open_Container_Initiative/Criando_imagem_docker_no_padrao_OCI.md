@@ -14,8 +14,8 @@ Será mostrado como criar uma imagem Docker usando o padrão da OCI (Open Contai
 
 ### Prática
 
+Criando o diretório do projeto:
 ```bash
-# Criando o diretório do projeto:
 mkdir -p /oci
 cd /oci
 ```
@@ -31,6 +31,29 @@ RUN apk add --no-cache curl
 # Mantém o container rodando indefinidamente em segundo plano
 CMD ["sleep", "infinity"]
 ```
+
+Logando no Docker Hub:
+```bash
+docker login -u cglinhares
+```
+
+```bash
+# Cr
+docker buildx build --platform linux/amd64 \
+-t docker.io/seu-usuario-dockerhub/minha-imagem-oci:1.0.0 \
+--output type=oci,dest=oci-layout-dir .
+```
+
+
+
+
+
+
+
+
+
+
+
 
 ```bash
 # Fazendo o build da imagem usando o builx
