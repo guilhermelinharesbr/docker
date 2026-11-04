@@ -35,58 +35,49 @@ CMD ["sleep", "infinity"]
 Logando no Docker Hub:
 ```bash
 docker login -u cglinhares
+# Confirmando o login:
+cat  /root/.docker/config.json
 ```
 
+Construindo a imagem no padrão OCI e já mandando para o docker Hub:
 ```bash
-# Cr
-docker buildx build --platform linux/amd64 \
--t docker.io/seu-usuario-dockerhub/minha-imagem-oci:1.0.0 \
---output type=oci,dest=oci-layout-dir .
+docker buildx build \
+--platform linux/amd64 \
+-t docker.io/cglinhares/minha-imagem-oci:1.0.0 \
+--push .
+# Obs: Ao fazer isso já é possível ver a imagem no Docker Hub e foi criado a imagem localmente.
+# Obs2: O BuildKit constrói a imagem respeitando estritamente o padrão OCI e faz o upload das camadas direto para a nuvem do Docker Hub.
 ```
 
-
-
-
-
-
-
-
-
-
-
-
+Removendo a imagem local:
 ```bash
-# Fazendo o build da imagem usando o builx
-docker buildx build -t minha-imagem-oci:1.0.0 --output type=oci,dest=minha-imagem-oci-1.0.0.tar .
-# Obs: O "type=oci": Força a exportação estritamente no formato de layout de imagem OCI (com manifestos, camadas e o arquivo oci-layout na raiz).
-# Obs2: dest=minha-imagem-oci.tar: Salva o resultado diretamente em um arquivo compactado tarball compatível com OCI.
+docker image ls
+docker image rm cglinhares/minha-imagem-oci:1.0.0
+docker image ls
 ```
 
+Baixando a imagem do Docker Hub:
 ```bash
-# Para inspecionar o interior do arquivo tar para confirmar a estrutura padrão da OCI (que inclui o arquivo oci-layout, index.json e a pasta blobs):
-tar -tf minha-imagem-oci-1.0.0.tar
-# Foi possível vem os arquivos abaixo:
-# blobs/
-# blobs/sha256/
-# blobs/sha256/23c7c93f800fa3dac858ad13b988289844c3cd151dcfaad42a310b10bc3b0072
-# blobs/sha256/29e57413c4e1a738c0349966ca484fc75b7f9874237878ed179f1e3d05aa5786
-# blobs/sha256/44cf07d57ee4424189f012074a59110ee2065adfdde9c7d9826bebdffce0a885
-# blobs/sha256/60f4acc5ee1f9b375ca52d52c8160c15301441315bd222bac2419430af311148
-# index.json
-# oci-layout
+docker image pull cglinhares/minha-imagem-oci:1.0.0
+docker image ls
 ```
 
-Testando a imagem, usando a ferramenta skopeo:
+Subindo o container:
 ```bash
-apt install skopeo
-skopeo copy oci:minha-imagem-oci-1.0.0.tar docker-daemon:minha-imagem-oci:1.0.0
-# Obs: O Skopeo é uma ferramenta de linha de comando de código aberto, leve e sem daemon, usada para manipular, inspecionar, copiar e assinar imagens de contêineres e repositórios remotos.
+docker container run -dit --name cont-padrao-oci --rm cglinhares/minha-imagem-oci:1.0.0
+docker container ls -a
+docker exec -it cont-padrao-oci sh
+# Para ver os processos em execução:
+top
 ```
 
-Sudindo o coantainer com base na imagem padrão OCI:
+Deslogando do Docker Hub:
 ```bash
-docker run --rm minha-imagem-oci:latest
+docker logout
+# Confirmando que logout foi realizado:
+cat  /root/.docker/config.json
 ```
 
+Com isso foi mostrado como criar um container no padrão OCI, mandá-lo para o Docker Hub, baixar essa imagem e depois criar um container com base nela. 
 
 ---
