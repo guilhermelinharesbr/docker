@@ -8,6 +8,7 @@
     - [compose down](Subcommands/docker_compose_down.md)
     - [compose up](Subcommands/docker_compose_up.md)
     - [compose version](Subcommands/docker_compose_version.md)
+- [Compose file](#compose-file)
 
 ---
 
@@ -65,5 +66,13 @@ A **diferença** principal entre **docker-compose** (com hífen) e **docker comp
 ### Subcomandos
 
 O comando docker compose possui diversos subcomandos, que podem ser vistos na subpasta [Docker_Compose](Subcommands/) deste repositório.
+
+---
+
+
+### Compose file
+
+O caminho padrão para um arquivo Compose é _**compose.yaml**_ _(preferencial)_ ou **compose.yml** localizado no diretório de trabalho. O Compose também suporta **docker-compose.yaml** e **docker-compose.yml** para compatibilidade com versões anteriores. Se ambos os arquivos existirem, o Compose dará _preferência ao compose.yaml_ canônico.
+
 
 ---
