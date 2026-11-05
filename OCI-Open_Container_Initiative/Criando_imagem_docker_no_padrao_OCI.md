@@ -80,4 +80,30 @@ cat  /root/.docker/config.json
 
 Com isso foi mostrado como criar um container no padrão OCI, mandá-lo para o Docker Hub, baixar essa imagem e depois criar um container com base nela. 
 
+Existem outras forma de criar uma imagem de um container no padrão OCI, sendo elas:
+- **Docker Buildx** (Com o BuildKit) -> Já foi mostrado neste artigo como é essa criação, mas outra forma seria:
+    - `docker buildx build -t minha-imagem:1.0.0 --output type=oci,dest=minha-imagem.tar .`
+- **Buildah** é uma ferramenta projetada especificamente para criar imagens de containers compatíveis com a OCI, sem sequer precisar do Docker Daemon rodando em segundo plano. É muito utilizada no ecossistema Red Hat / Fedora / Ubuntu.
+![buildah.png](images/buildah.png)
+    - [Buildah site](https://buildah.io/)
+    - Exemplo: 
+```bash
+# Cria um container temporário a partir de uma base
+container=$(buildah from alpine:3.18)
+# Instala pacotes ou altera arquivos dentro dele
+buildah run $container -- apk add --no-cache curl
+# Salva o resultado diretamente no padrão de layout OCI em uma pasta
+buildah commit --format oci $container oci-image-dir:1.0.0
+```
+
+
+- **Podman** é um motor de gerenciamento de containers compatível com a CLI do Docker, mas construído nativamente sobre a arquitetura OCI e libpod.
+    - `podman build -t minha-imagem-podman:latest .`
+    ![podman.png](images/podman.png)
+    - [Podman site](https://podman.io/)
+    - Exemplo: 
+```bash
+podman build -t minha-imagem-podman:1.0.0 .
+```
+
 ---
