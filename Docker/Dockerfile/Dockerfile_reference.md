@@ -23,7 +23,7 @@ O Dockerfile oferece suporte às seguintes instruções:
 | Instrução | Descrição  |
 | :--- | :--- |
 | **`ADD`** | Adiciona arquivos e diretórios locais ou remotos. |
-| **`ARG`** | Usaa variáveis ​​de tempo de compilação(build-time) |
+| **`ARG`** | Usa variáveis ​​de tempo de compilação(build-time) |
 | **`CMD`** | Especifica comandos padrão. |
 | **`COPY`** | Copia arquivos e diretórios. |
 | **`ENTRYPOINT`** | Especifica o executável padrão. |
