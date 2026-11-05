@@ -109,8 +109,15 @@ volumes:
   db:
 ```
 
-
-
-
+Subindo os containers e analisando o que foi feito:
+```bash
+docker compose up -d
+docker image ls
+docker container ls -a
+docker volume ls
+docker network ls
+# A partir deste momento pode-se instalar o Wordpress via navegador por meio do endereço http:ip_da_vm:80.
+# Após instalado basta digitar no navegador http:ip_da_vm que poderá ver o conteúdo do blog.
+```
 
 ---
