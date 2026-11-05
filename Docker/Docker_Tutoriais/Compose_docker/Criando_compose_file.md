@@ -60,15 +60,57 @@ docker volume ls
 
 # Criando o diretório base do projeto:
 mkdir /wordpress
+cd /wordpress
+```
+
+Criando o compose.yaml **primeira versão**.
+```bash
+vim compose.yaml
 ```
 
 ```yaml
-# Criando o compose.yaml
-# Vale ressaltar que o parâmetro "version" é deprecated só era usado até o Docker Compose V1, a partir do V2 ele não é mais necessário
-
+# Vale ressaltar que o parâmetro "version" é deprecated só era usado até o Docker Compose V1, a partir do V2 ele não é mais necessário.
+services:
+  meu-blog:
+    container_name: wordpress
+    image: wordpress:6.2.2
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_USER=guilherme
+      - WORDPRESS_DB_PASSWORD=123456
+      - WORDPRESS_DB_NAME=wp-example
+    ports:
+      - 80:80
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - meu-blog
+  db:
+    container_name: mysql
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_DATABASE=wp-example
+      - MYSQL_USER=guilherme
+      - MYSQL_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - 8080:8080
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - meu-blog
+networks:
+  meu-blog:
+    driver: bridge
+volumes:
+  wordpress:
+  db:
 ```
 
-# Parei em 16/26 min aula 33
+
+
 
 
 ---

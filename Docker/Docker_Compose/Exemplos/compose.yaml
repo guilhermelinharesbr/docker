@@ -2,6 +2,7 @@
 
 services:
   meu-blog:
+    container_name: wordpress
     image: wordpress:6.2.2
     restart: always
     environment:
@@ -11,23 +12,87 @@ services:
       - WORDPRESS_DB_NAME=wp-example
     ports:
       - 80:80
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - meu-blog
+  db:
+    container_name: mysql
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_DATABASE=wp-example
+      - MYSQL_USER=guilherme
+      - MYSQL_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - 8080:8080
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - meu-blog
+networks:
+  meu-blog:
+    driver: bridge
+volumes:
+  wordpress:
+  db:
+      
 
 
-
-
-
+###
 # Os arquivos elementos em arquivos .yaml precisam de dois espaços de indentação para cada nível.
+###
 # services -> Define os containers que serão criados. Cada item abaixo dele é um serviço independente. 
   # Geralmente os compose.yaml possuem mais de um service, o nome do service fica abaixo dele, no caso deste exemplo, o nome do service é "meu-blog".
 # image -> Especifica qual imagem pronta do Docker Hub será utilizada.
+###
 # restart -> Define a política de reinício do container, garantindo que ele seja reiniciado automaticamente em caso de falha.
   # Opções possíveis: 
   # no -> A política de reinicialização padrão. Ela não reinicia o container em nenhuma circunstância.
   # always -> A política sempre reinicia o container até que ele seja removido. Muito últil, para quando houver uma falha no container ou o Docker daemon for algum motivo for reiniciado. Usado em produção para garantir a alta disponibilidade do serviço.
   # on-failure -> A política reinicia o container se o código de saída indicar um erro. Opcionalmente, limite o número de tentativas de reinicialização que o tempo de execução do container fará.
   # unless-stopped -> A política reinicia o container independentemente do código de saída, mas para de reiniciar quando o serviço é interrompido ou removido.
+###
 # environment -> Define as variáveis de ambiente necessárias para configurar o container (como senhas de banco de dados).
+###
 # ports -> Mapeia as portas do seu computador físico (host) para dentro do container.
 # volumes -> Garante a persistência de dados, impedindo que arquivos sumam quando o container for reiniciado.
+###
 # networks -> Conecta os containers em uma rede isolada para que eles consigam conversar entre si usando apenas o nome do serviço.
+###
 # build -> Usado quando você quer construir a imagem a partir de um Dockerfile local em vez de baixar uma pronta.
+#########
+# Este compose file é para substituir esses dois comandos abaixo:
+# Docker run do container do MySQL
+# docker run -dit --name mysql \
+# -e MYSQL_DATABASE=wp-example \
+# -e MYSQL_USER=guilherme \
+# -e MYSQL_PASSWORD=123456 \
+# -e MYSQL_ROOT_PASSWORD=123456 \
+# --mount source=db,target=/var/lib/mysql \
+# --network meu-blog \
+# -p 8080:8080 \
+# mysql:5.7
+
+# Docker run do container do Wordpress 
+# docker run -dit --name wordpress \
+# -e WORDPRESS_DB_HOST=mysql \
+# -e WORDPRESS_DB_USER=guilherme \
+# -e WORDPRESS_DB_PASSWORD=123456 \
+# -e WORDPRESS_DB_NAME=wp-example \
+# --mount source=wordpress,target=/var/www/html \
+# --network meu-blog \
+# -p 80:80 \
+# wordpress:6.2.2​​
+###
+###
+###
+# Em WORDPRESS_DB_HOST=db, o db é o nome do serviço(service) do container do MySQL,
+# mas também se quisesse poderia usar o nome do container.
+###
+# Caso os volumes ainda não existam, o Docker Compose irá criá-los automaticamente. Se quiser criar manualmente, use o comando:
+# docker volume create wordpress
+# docker volume create db
+###
+# Vale ressaltar que o parâmetro "version" é deprecated só era usado até o Docker Compose V1, a partir do V2 ele não é mais necessário.
