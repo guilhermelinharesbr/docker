@@ -1,0 +1,33 @@
+# Estrutura moderna do Compose V2 em diante, mais explicações no final do arquivo.
+
+services:
+  meu-blog:
+    image: wordpress:6.2.2
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_USER=guilherme
+      - WORDPRESS_DB_PASSWORD=123456
+      - WORDPRESS_DB_NAME=wp-example
+    ports:
+      - 80:80
+
+
+
+
+
+# Os arquivos elementos em arquivos .yaml precisam de dois espaços de indentação para cada nível.
+# services -> Define os containers que serão criados. Cada item abaixo dele é um serviço independente. 
+  # Geralmente os compose.yaml possuem mais de um service, o nome do service fica abaixo dele, no caso deste exemplo, o nome do service é "meu-blog".
+# image -> Especifica qual imagem pronta do Docker Hub será utilizada.
+# restart -> Define a política de reinício do container, garantindo que ele seja reiniciado automaticamente em caso de falha.
+  # Opções possíveis: 
+  # no -> A política de reinicialização padrão. Ela não reinicia o container em nenhuma circunstância.
+  # always -> A política sempre reinicia o container até que ele seja removido. Muito últil, para quando houver uma falha no container ou o Docker daemon for algum motivo for reiniciado. Usado em produção para garantir a alta disponibilidade do serviço.
+  # on-failure -> A política reinicia o container se o código de saída indicar um erro. Opcionalmente, limite o número de tentativas de reinicialização que o tempo de execução do container fará.
+  # unless-stopped -> A política reinicia o container independentemente do código de saída, mas para de reiniciar quando o serviço é interrompido ou removido.
+# environment -> Define as variáveis de ambiente necessárias para configurar o container (como senhas de banco de dados).
+# ports -> Mapeia as portas do seu computador físico (host) para dentro do container.
+# volumes -> Garante a persistência de dados, impedindo que arquivos sumam quando o container for reiniciado.
+# networks -> Conecta os containers em uma rede isolada para que eles consigam conversar entre si usando apenas o nome do serviço.
+# build -> Usado quando você quer construir a imagem a partir de um Dockerfile local em vez de baixar uma pronta.

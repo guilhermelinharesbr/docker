@@ -60,15 +60,15 @@ docker volume ls
 
 # Criando o diretório base do projeto:
 mkdir /wordpress
+```
 
+```yaml
 # Criando o compose.yaml
 # Vale ressaltar que o parâmetro "version" é deprecated só era usado até o Docker Compose V1, a partir do V2 ele não é mais necessário
 
-# Parei em 13 min aula 33
-
 ```
 
-
+# Parei em 16/26 min aula 33
 
 
 ---
