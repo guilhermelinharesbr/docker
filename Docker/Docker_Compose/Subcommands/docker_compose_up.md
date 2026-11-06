@@ -10,13 +10,15 @@
 
 ### Descrição
 
-O **docker compose up** 
+O **docker compose up** constrói, (re)cria, inicia e conecta-se a containeres de um serviço.
+
+A menos que já estejam em execução, este comando também inicia quaisquer serviços vinculados.
 
 ---
 
 ### Sintaxe
 
-docker **compose up**
+docker **compose up** [OPTIONS] [SERVICE...]
 
 ---
 
@@ -24,7 +26,7 @@ docker **compose up**
 
 As opções podem ser vistas por meio do comando `docker compose up --help` sendo elas:
 
-- 
+- **-d**, **--detach** -> Detached mode: executa containeres em segundo plano.
 
 ---
 

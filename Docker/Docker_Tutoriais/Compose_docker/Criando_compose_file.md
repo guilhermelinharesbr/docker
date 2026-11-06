@@ -127,32 +127,29 @@ vim compose.yaml
 ```
 
 ```yaml
-# Removendo exposição de informações sensíveis
+# Removendo exposição de informações sensíveis usando o parâmetro env_file.
+# Usando e usando o parâmetro depends_on para garantir que o container do banco de dados suba antes do do container do wordpress.
 services:
   meu-blog:
     container_name: wordpress
     image: wordpress:6.2.2
     restart: always
-    environment:
-      - WORDPRESS_DB_HOST=mysql
-      - WORDPRESS_DB_USER=guilherme
-      - WORDPRESS_DB_PASSWORD=123456
-      - WORDPRESS_DB_NAME=wp-example
+    env_file:
+      - .env
     ports:
       - 80:80
     volumes:
       - wordpress:/var/www/html
     networks:
       - meu-blog
+    depends_on:
+      - db
   db:
     container_name: mysql
     image: mysql:5.7
     restart: always
-    environment:
-      - MYSQL_DATABASE=wp-example
-      - MYSQL_USER=guilherme
-      - MYSQL_PASSWORD=123456
-      - MYSQL_ROOT_PASSWORD=123456
+    env_file:
+      - .env
     ports:
       - 8080:8080
     volumes:
@@ -167,6 +164,47 @@ volumes:
   db:
 ```
 
+Criando o arquivo **.env** na raiz do projeto:
 
+```bash
+vim .env
+```
+
+```bash
+# Conteúdo do arquivo .env
+WORDPRESS_DB_HOST=mysql
+WORDPRESS_DB_USER=guilherme
+WORDPRESS_DB_PASSWORD=123456
+WORDPRESS_DB_NAME=wp-example
+MYSQL_DATABASE=wp-example
+MYSQL_USER=guilherme
+MYSQL_PASSWORD=123456
+MYSQL_ROOT_PASSWORD=123456
+```
+
+Removendo tudo o que foi feito:
+```bash
+docker compose down -v
+docker image prune -a
+docker image ls
+docker container ls -a
+docker volume ls
+docker network ls
+```
+
+Subindo os containers já usando o compose.yaml já na versão mais segura e usando o .env:
+```bash
+ls -lha
+docker compose up -d
+# A partir deste momento pode-se instalar o Wordpress via navegador por meio do endereço http:ip_da_vm:80.
+# Após instalado basta digitar no navegador http:ip_da_vm que poderá ver o conteúdo do blog.
+
+# Só confirmando se tudo foi recriado corretamente:
+docker image ls
+docker container ls -a
+docker volume ls
+docker network ls
+docker compose ps
+```
 
 ---
