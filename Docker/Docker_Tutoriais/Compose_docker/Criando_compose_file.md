@@ -120,4 +120,53 @@ docker network ls
 # Após instalado basta digitar no navegador http:ip_da_vm que poderá ver o conteúdo do blog.
 ```
 
+
+Editando o compose.yaml **segunda versão**.
+```bash
+vim compose.yaml
+```
+
+```yaml
+# Removendo exposição de informações sensíveis
+services:
+  meu-blog:
+    container_name: wordpress
+    image: wordpress:6.2.2
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_USER=guilherme
+      - WORDPRESS_DB_PASSWORD=123456
+      - WORDPRESS_DB_NAME=wp-example
+    ports:
+      - 80:80
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - meu-blog
+  db:
+    container_name: mysql
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_DATABASE=wp-example
+      - MYSQL_USER=guilherme
+      - MYSQL_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - 8080:8080
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - meu-blog
+networks:
+  meu-blog:
+    driver: bridge
+volumes:
+  wordpress:
+  db:
+```
+
+
+
 ---

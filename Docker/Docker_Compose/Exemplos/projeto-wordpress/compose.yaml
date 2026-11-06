@@ -99,3 +99,5 @@ volumes:
 # docker volume create db
 ###
 # Vale ressaltar que o parâmetro "version" é deprecated só era usado até o Docker Compose V1, a partir do V2 ele não é mais necessário.
+###
+# Se não usar o parâmetro "name" no volume ou network o docker compose criará um volume e uma rede com o prefixo com o nome da pasta, por exemplo, meu-blog, ficaria wordpress_meu-blog e wordpress ficaria wordpress_wordpress.
