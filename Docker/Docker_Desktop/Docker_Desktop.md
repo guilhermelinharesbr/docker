@@ -16,6 +16,9 @@ O Docker Desktop reduz o tempo gasto em configurações complexas, permitindo qu
 
 O Docker Desktop se integra às suas ferramentas e linguagens de desenvolvimento preferidas e oferece acesso a um vasto ecossistema de imagens e modelos confiáveis ​​por meio do Docker Hub. Isso permite que as equipes acelerem o desenvolvimento, automatizem builds, habilitem fluxos de trabalho de CI/CD e colaborem com segurança por meio de repositórios compartilhados.
 
+
+![docker_desktop.png](/Docker/images/Docker_Desktop/docker_desktop.png)
+
 ---
 
 ### Fonte de Pesquisa

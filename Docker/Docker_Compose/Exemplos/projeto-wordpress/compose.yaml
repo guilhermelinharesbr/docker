@@ -5,26 +5,22 @@ services:
     container_name: wordpress
     image: wordpress:6.2.2
     restart: always
-    environment:
-      - WORDPRESS_DB_HOST=mysql
-      - WORDPRESS_DB_USER=guilherme
-      - WORDPRESS_DB_PASSWORD=123456
-      - WORDPRESS_DB_NAME=wp-example
+    env_file:
+      - .env
     ports:
       - 80:80
     volumes:
       - wordpress:/var/www/html
     networks:
       - meu-blog
+    depends_on:
+      - db
   db:
     container_name: mysql
     image: mysql:5.7
     restart: always
-    environment:
-      - MYSQL_DATABASE=wp-example
-      - MYSQL_USER=guilherme
-      - MYSQL_PASSWORD=123456
-      - MYSQL_ROOT_PASSWORD=123456
+    env_file:
+      - .env
     ports:
       - 8080:8080
     volumes:
@@ -40,7 +36,6 @@ volumes:
     name: wordpress
   db:
     name: db
-      
 
 
 ###

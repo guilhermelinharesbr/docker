@@ -24,6 +24,8 @@ Algumas **Vantagens** de usar o .env:
 
 Obs: Lembrando que arquivos começados com . como o .env, no linux são tratados como ocultos, para listá-los usar `ls -lha`.
 
+Obs2: Quando usa-se um .env em um projeto com **compose.yaml** pode-se usar os parâmetros **environment** ou **env_file**, com ambos funciona.
+
 ---
 
 ### Sintaxe
@@ -105,6 +107,20 @@ networks:
 volumes:
   wordpress_data:
   mysql_data:
+```
+
+Subindos os containers:
+```bash
+docker compose up -d
+```
+
+Confirmando que as imagens foram baixadas, containers, volumes e redes foram criados:
+```bash
+docker image ls
+docker container ls -a
+docker volume ls
+docker network ls
+docker compose ps
 ```
 
 ---
