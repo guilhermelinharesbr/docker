@@ -33,10 +33,13 @@ services:
       - meu-blog
 networks:
   meu-blog:
+    name: meu-blog
     driver: bridge
 volumes:
   wordpress:
+    name: wordpress
   db:
+    name: db
       
 
 
