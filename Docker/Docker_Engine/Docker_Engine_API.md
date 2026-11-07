@@ -10,7 +10,7 @@
 
 A **Docker Engine API** é uma API RESTful exposta pelo Daemon do Docker (dockerd). Como ela segue o padrão HTTP, qualquer linguagem de programação ou ferramenta externa (como o curl) pode conversar diretamente com o motor do Docker para criar containers, gerenciar imagens e monitorar recursos sem precisar passar pela CLI tradicional.
 
-O Docker fornece uma API para interagir com o daemon do Docker (Docker Engine API), bem como SDKs para Go e _Python_. Os SDKs permitem criar e dimensionar aplicativos e soluções Docker de forma eficiente. Se Go ou Python não forem adequados para você, é possível usar a API do Docker Engine diretamente.
+O Docker fornece uma API para interagir com o daemon do Docker (Docker Engine API), bem como SDKs para Go e _Python_. Os SDKs permitem criar e dimensionar aplicativos e soluções Docker de forma eficiente. Se as linguagens Go ou Python não forem adequados para o projeto, é possível usar a API do Docker Engine diretamente.
 
 ---
 
@@ -25,7 +25,7 @@ O Docker fornece uma API para interagir com o daemon do Docker (Docker Engine AP
 Testando a Docker Engine API com **HTTP** com o comando _curl_:
 
 ```bash
-# Baixando uma imagem do Docker Hub, para depois o equivalente via API
+# Baixando uma imagem do Docker Hub via comandos docker, para depois fazer o equivalente via API:
 docker pull cglinhares/minha-imagem-oci:1.0.0
 docker image ls
 docker image rm cglinhares/minha-imagem-oci:1.0.0

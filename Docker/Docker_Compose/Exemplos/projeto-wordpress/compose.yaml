@@ -60,6 +60,8 @@ volumes:
 # networks -> Conecta os containers em uma rede isolada para que eles consigam conversar entre si usando apenas o nome do serviço.
 ###
 # build -> Usado quando você quer construir a imagem a partir de um Dockerfile local em vez de baixar uma pronta.
+  # context -> Define o diretório onde o Dockerfile está localizado. No caso deste exemplo, o Dockerfile está na mesma pasta do compose.yaml, então usamos ".".
+  # dockerfile -> Permite especificar o nome do Dockerfile caso ele não seja o padrão "Dockerfile". No caso deste exemplo, o Dockerfile é o padrão, então não precisamos especificar, mas poderia ser usado assim: dockerfile: mongo.dockerfile.
 #########
 # Este compose file é para substituir esses dois comandos abaixo:
 # Docker run do container do MySQL
