@@ -2,7 +2,7 @@ services:
   mongo:
     build:
       context: .
-      dockerfile: mongo.dockerfile
+      dockerfile: mongodb.dockerfile
     container_name: mongo
     ports:
       - 27017:27017
@@ -23,7 +23,7 @@ services:
 
   node1:
     build:
-      context: .contextPath
+      context: .
       dockerfile: app.dockerfile
     container_name: node1
     ports:
@@ -33,7 +33,7 @@ services:
 
   node2:
     build:
-      context: .contextPath
+      context: .
       dockerfile: app.dockerfile
     container_name: node2
     ports:
@@ -43,14 +43,14 @@ services:
 
   node3:
     build:
-      context: .contextPath
+      context: .
       dockerfile: app.dockerfile
     container_name: node3
     ports:
       - 3003:3000
     networks:
       - rede-aplicacao
-        
+
   nginx:
     image: nginx:stable-alpine
     container_name: nginx

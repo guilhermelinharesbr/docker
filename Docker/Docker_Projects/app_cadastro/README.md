@@ -4,18 +4,19 @@
 
 ### Descrição
 
-Neste artigo será mostrado como criar um compose file para o projeto de um app de cadastro que usa a JavaScript, MongoDB e nginx como loadbalance.
+Projeto de uma página web para cadastro de usuários desenvolvido em NodeJS, MongoExpress com intuito educacional e nginx como loadbalance, tudo em containers docker.
 
 Escopo:
 
-![escopo](/Docker/images/Docker_Projects/app_cadastro_com_load_balance_e_mongodb/escopo.jpeg)
+![escopo](/Docker/images/Docker_Projects/app_cadastro/escopo.jpeg)
 
 Na imagem acima são mostrados três containers chamados app-cadastro, onde eles no [compose.yaml](compose.yaml) são representados pelos services node1, node2 e node3.
 
+Para executar este projeto, rodar na raiz do projeto, onde encontra-se o arquivo compose.yaml:
+`docker compose up -d`
 
-Serão criados três Dockerfiles:
+Conferindo o que foi criado:
 ```bash
-# 
 ```
 
 ---
