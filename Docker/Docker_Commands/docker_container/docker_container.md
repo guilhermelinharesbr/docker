@@ -15,6 +15,7 @@
     - [container rm](Subcommands/docker_container_rm.md)
     - [container run](./docker_container/docker_container_run.md)
     - [container start](Subcommands/docker_container_start.md)
+    - [container stats](Subcommands/docker_container_stats.md)
     - [container stop](Subcommands/docker_container_stop.md)
     - [container top](Subcommands/docker_container_top.md)
     - [container unpause](Subcommands/docker_container_unpause.md)

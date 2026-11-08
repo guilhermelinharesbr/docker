@@ -3,21 +3,13 @@
 
 ### Sumário
 
-- [Definição](#definição)
 - [Fonte de Pesquisa](#fonte-de-pesquisa)
 - [CTRL + d](#ctrl--d)
 - [help / -h / --help](#help---h----help)
-- [stats](#stats)
 - [-v](#-v)
 - [Comandos LEGADOS](#comandos-legados)
 - [build (legado)](#build-legado)
 - [cp (legado)](#cp-legado)
-
----
-
-#### Definição
-
-O **Docker** é uma plataforma open-source desenvolvida para facilitar a criação, o envio e a execução de aplicações através do uso de containers.
 
 ---
 
@@ -59,19 +51,6 @@ ou
 docker ps -h
 ou
 docker ps --help
-```
-
----
-
-#### stats
-
-O **docker stats** exibe um fluxo ao vivo das estatísticas de uso de recursos do(s) container(s). Por exemplo, container, uso de CPU, uso de memória, etc.
-
-Ex:
-```bash
-docker stats 8b54c76e81b7
-ou 
-docker stats ocsinventory
 ```
 
 ---
