@@ -8,7 +8,6 @@
 - [CTRL + d](#ctrl--d)
 - [help / -h / --help](#help---h----help)
 - [stats](#stats)
-- [version](#version)
 - [-v](#-v)
 - [Comandos LEGADOS](#comandos-legados)
 - [build (legado)](#build-legado)
@@ -73,18 +72,6 @@ Ex:
 docker stats 8b54c76e81b7
 ou 
 docker stats ocsinventory
-```
-
----
-
-#### version
-
-O **docker version** mostra a versão do docker, docker engine, cliente e servidor. 
-É uma maneira mais completa de informações da versão do docker, a maneira resumida é o [docker -v](#-v).
-
-Ex:
-```bash
-docker version
 ```
 
 ---
