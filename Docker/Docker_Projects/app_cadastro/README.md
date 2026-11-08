@@ -5,12 +5,11 @@
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Demonstração](#demonstração)
 
-
 ---
 
 ### Descrição
 
-Projeto de uma página web para cadastro de usuários desenvolvido em NodeJS, MongoExpress com intuito educacional e nginx como loadbalance, tudo em containers docker.
+Projeto de uma página web para cadastro de usuários desenvolvido em NodeJS, MongoDB e nginx como loadbalance, tudo em containers docker.
 
 ---
 
