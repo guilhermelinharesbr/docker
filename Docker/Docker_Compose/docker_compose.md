@@ -4,6 +4,7 @@
 - [Descrição](#descrição)
 - [Instalação](#instalação)
 - [docker-compose standalone (legado)](#docker-compose-standalone-legadoo)
+- [Opções](#opções)
 - [Subcomandos](#subcomandos)
     - [compose down](Subcommands/docker_compose_down.md)
     - [compose up](Subcommands/docker_compose_up.md)
@@ -60,6 +61,14 @@ A **diferença** principal entre **docker-compose** (com hífen) e **docker comp
 - Como é chamado: Como um comando separado e autônomo (docker-compose).
 - Tecnologia: Escrito em Python.
 - Status atual: Obsoleto (Deprecated). O suporte oficial e atualizações de segurança para essa versão legada foram encerrados.
+
+---
+
+### Opções
+
+As opções podem ser vistas por meio do comando `docker compose --help` sendo elas:
+
+- **-f**, **--file** -> para indicar o caminho do compose file.
 
 ---
 
