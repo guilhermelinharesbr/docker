@@ -9,7 +9,6 @@
 - [-v](#-v)
 - [Comandos LEGADOS](#comandos-legados)
 - [build (legado)](#build-legado)
-- [cp (legado)](#cp-legado)
 
 ---
 
@@ -90,22 +89,6 @@ Além disso, se não houvesse a imagem do ubuntu já baixado no host ele baixari
 Ex2:
 ```bash
 docker build -t joomla3php8 .
-```
-
----
-
-#### cp (legado)
-
-O **docker cp** é usado para copiar um arquivo que estava fora do contêiner para dentro do container, ou de dentro do container para fora.
-
-Ex. de cópia de um arquivo de _fora_ para dentro:
-```bash
-docker cp bkp_mysql docker_mysql-master_1:/usr/local/bin/
-```
-
-Ex. de cópia de um arquivo de _dentro_ para fora:
-```bash
-docker cp Ubuntu-A:/destino/MeuZip.zip  Zipcopia.zip
 ```
 
 ---
