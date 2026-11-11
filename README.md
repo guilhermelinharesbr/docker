@@ -4,7 +4,7 @@
 
 ### Sumário
 - [Descrição](#descrição)
-- [Fonte de Pesquisa](#fonte-de-pesquisa)
+- [Links úteis](#links-úteis)
 - [Pastas e subpastas](Docker/)
     - [Comandos](Docker/Docker_Commands/)
     - [Comandos Legado](Docker/Docker_Comannds_Legacy/)
@@ -28,7 +28,7 @@ Repositório com informações sobre o Docker, entre elas a arquitetura, seus co
 
 ---
 
-#### Fonte de Pesquisa
+#### Links úteis
 
 - [Site oficial do Docker](https://www.docker.com/ "Site oficial do Docker")
 
