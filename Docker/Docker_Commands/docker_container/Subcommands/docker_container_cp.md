@@ -38,7 +38,7 @@ As opções podem ser vistas por meio do comando `docker container cp --help` se
 
 Ex. Para copiar um arquivo que estava fora do container para dentro do container:
 ```bash
-docker container cp nome_arquivo nome_container:/duretorio-de-destino
+docker container cp nome_arquivo nome_container:/diretorio-de-destino
 ```
 
 Ex2. Copiando o arquivo de nome bkp_mysql do host local para dentro do container chamado docker_mysql-master_1 no diretório /usr/local/bin:
@@ -50,7 +50,7 @@ docker container cp bkp_mysql docker_mysql-master_1:/usr/local/bin/
 
 Ex3. Para copiar um arquivo de dentro do Container para a máquina local:
 ```bash
-docker container cp nome_container:/diretorio-de-destino/nome-arquivo nome_arquivo_que_será_no_host_local
+docker container cp nome_container:/diretorio-de-origem/nome-arquivo nome_arquivo_que_será_no_host_local
 ```
 
 Ex4. Copiando o arquivo de nome Meuzip.zip de dentro do container chamado cont-alpine para o host local, e já nomeando o arquivo como Meuzip.zip.bkp:
