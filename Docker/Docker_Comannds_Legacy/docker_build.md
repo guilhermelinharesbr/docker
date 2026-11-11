@@ -15,7 +15,7 @@ O **docker build** serve para criar (construir) uma imagem Docker a partir de um
 
 Em termos práticos, ele funciona como a ferramenta que lê a sua "receita de bolo" (o Dockerfile) linha por linha, instalando dependências, copiando códigos e configurando o ambiente, e empacota tudo isso em uma imagem imutável. Essa imagem gerada pode posteriormente ser executada como um container em qualquer máquina.
 
-Pré-BuildKit???
+Pré-BuildKit.
 
 ---
 

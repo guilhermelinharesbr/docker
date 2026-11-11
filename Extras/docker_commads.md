@@ -7,8 +7,6 @@
 - [CTRL + d](#ctrl--d)
 - [help / -h / --help](#help---h----help)
 - [-v](#-v)
-- [Comandos LEGADOS](#comandos-legados)
-- [build (legado)](#build-legado)
 
 ---
 
@@ -62,33 +60,6 @@ A maneira de ver as informações mais completas da versão do docker é o [dock
 Ex:
 ```bash
 docker -v
-```
-
----
-
-### Comandos LEGADOS
-
-Com a introdução da CLI estruturada em subcomandos baseados em objetos (como docker container, docker image, docker network) a partir da versão 1.13, diversos comandos de primeiro nível passaram a ser considerados legados.
-
-Apesar de serem chamados de legados, eles continuam funcionando perfeitamente (a Docker os mantém por razões de compatibilidade com scripts e hábitos antigos).
-
----
-
-#### build (legado)
-
-O **docker build** é usado para “buildar” e gerar uma imagem a partir do Dockerfile.
-
-Ex:
-```bash
-docker build . -t python-ubuntu
-```
-
-Obs: No exemplo acima o **.** significa que o Dockerfile está nessa pasta. A opção **-t** é para colocar uma tag/nomear a imagem, -t vem de tag list. 
-Além disso, se não houvesse a imagem do ubuntu já baixado no host ele baixaria agora.
-
-Ex2:
-```bash
-docker build -t joomla3php8 .
 ```
 
 ---
