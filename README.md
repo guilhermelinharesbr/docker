@@ -6,6 +6,8 @@
 - [Descrição](#descrição)
 - [Links úteis](#links-úteis)
 - [Pastas e subpastas](Docker/)
+    - [Arquitetura](Docker/Arquitetura/)
+    - [Atalhos de Terminal Linux](Docker/Atalhos_de_Terminal/)
     - [Comandos](Docker/Docker_Commands/)
     - [Comandos Legado](Docker/Docker_Comannds_Legacy/)
     - [Docker Compose](Docker/Docker_Compose/)
@@ -25,6 +27,8 @@
 ### Descrição
 
 Repositório com informações sobre o Docker, entre elas a arquitetura, seus comandos e subcomandos, Dockerfiles, Docker Compose, Docker Desktop, Docker Hub, Docker Swarm, além de projetos.
+
+O ideal para começo de leitura deste repositório é pelo arquivo [Arquitetura.md](Docker/Arquitetura/Arquitetura.md), a partir dele será mais natural a leitura do restante dos arquivos diponíveis aqui.
 
 ---
 

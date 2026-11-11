@@ -2,8 +2,7 @@
 
 ### Sumário
 - [Descrição](#descrição)
-- [Atalhos]()
-- [Ctrl + D]()
+- [Ctrl + d](#ctrl--d)
 
 ---
 
