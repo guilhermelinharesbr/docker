@@ -1,0 +1,8 @@
+#Todas as linhas estão comentadas para que o git não ignore os arquivos do projeto, caso queira que o git ignore algum arquivo, basta remover o "#" da linha correspondente.
+#vint/
+#__pycache__/
+#.git/
+#.gitignore
+#README.md
+#requirements.txt
+#.dockerignore

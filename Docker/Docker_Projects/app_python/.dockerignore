@@ -1,0 +1,29 @@
+# Ambientes virtuais locais
+venv/
+env/
+ENV/
+.venv/
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Arquivos de controle de versão e documentação local
+.git/
+.gitignore
+README.md
+
+# Arquivos de IDE (como VS Code)
+.vscode/
+.idea/
+
+# Outros arquivos indesejados ou logs
+*.log
+.DS_Store
+docker-compose.yml
+Dockerfile
+.dockerignore
