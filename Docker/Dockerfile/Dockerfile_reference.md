@@ -128,9 +128,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 Obs: O que foi feito: O **--no-install-recommends** impede a instalação de pacotes supérfluos, e o __rm -rf /var/lib/apt/lists/*__ apaga o catálogo de pacotes baixados pelo apt-get update, economizando dezenas de megabytes.
 
 Criando uma imagem _Sem_ usar as melhores práticas do apt no RUN:
+
 `docker build -t myapp-versao-apt:1.0.0 .`
 
 Criando uma imagem _Usando_ as melhores práticas do apt no RUN:
+
 `docker build -t myapp-versao-apt:2.0.0 .`
 
 Os resultados dos testes foram que ao criar uma imagem do Ubuntu 24.04 sem as melhores práticas do APT no RUN ela ficou com 98.7MB, já utilizando as melhores práticas dentro do mesmo RUN a imagem ficou com 55.5MB.
@@ -154,9 +156,11 @@ RUN dnf install -y \
 Obs: O que foi feito: O dnf clean all limpa os dados gerados pelos repositórios e o rm -rf /var/cache/dnf garante que nenhum resíduo de cache persista na camada.
 
 Criando uma imagem _Sem_ usar as melhores práticas do dnf no RUN:
+
 `docker build -t myapp-versao-dnf:1.0.0 .`
 
 Criando uma imagem _Usando_ as melhores práticas do dnf no RUN:
+
 `docker build -t myapp-versao-dnf:2.0.0 .`
 
 Os resultados dos testes foram que ao criar uma imagem do Rocky Linux 9 sem as melhores práticas do DNF no RUN ela ficou com 208MB, já utilizando as melhores práticas dentro do mesmo RUN a imagem ficou com 97.8MB.
@@ -178,9 +182,11 @@ RUN apk add --no-cache \
 Obs: O que foi feito: A flag **--no-cache** diz ao apk para atualizar o índice e instalar o pacote diretamente sem salvar o arquivo de cache localmente no disco, dispensando comandos extras de limpeza como rm -rf.
 
 Criando uma imagem _Sem_ usar as melhores práticas do apk no RUN:
+
 `docker build -t myapp-versao-apk:1.0.0 .`
 
 Criando uma imagem _Usando_ as melhores práticas do apk no RUN:
+
 `docker build -t myapp-versao-apk:2.0.0 .`
 
 Os resultados dos testes foram que ao criar uma imagem do Alpine 3.20 sem as melhores práticas do APK no RUN ela ficou com 12.3MB, já utilizando as melhores práticas dentro do mesmo RUN a imagem ficou com 9.95MB.

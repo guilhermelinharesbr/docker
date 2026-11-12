@@ -1,0 +1,18 @@
+version: '3.2'
+
+services:
+
+  bacula-client:
+    build: bacula-fd/.
+    image: martmaiste/bacula-fd
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+            #memory: 50M
+    ports:
+      - 9102:9102
+    env_file: .env
+    volumes:
+      - /backups:/backups:ro
