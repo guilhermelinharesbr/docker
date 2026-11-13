@@ -11,7 +11,7 @@
 
 ### Descrição
 
-O **docker image LS** lista imagens.
+O **docker image ls** lista imagens.
 
 Por padrão exibem todas as imagens de nível superior, seus repositórios, tags e tamanhos.
 
@@ -38,7 +38,7 @@ docker **image ls** [OPTIONS] [REPOSITORY[:TAG]]
 
 ### Opções
 
-As opções podem ser vistas por meio do comando `docker images --help` sendo elas:
+As opções podem ser vistas por meio do comando `docker image ls --help` sendo elas:
 
 - **-a**, **--all** -> Mostra todas as imagens (por padrão, oculta imagens intermediárias e flutuantes).
 
