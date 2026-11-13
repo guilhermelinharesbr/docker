@@ -6,6 +6,7 @@
     - [image build](Subcommands/docker_image_build.md)
     - [image history](Subcommands/docker_image_history.md)
     - [image import](Subcommands/docker_image_import.md)
+    - [image load](Subcommands/docker_image_load.md)
     - [image ls](Subcommands/docker_image_ls.md)
     - [image pull](Subcommands/docker_image_pull.md)
     - [image push](Subcommands/docker_image_push.md)
