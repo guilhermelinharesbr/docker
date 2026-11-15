@@ -10,7 +10,7 @@
 
 Este artigo mostrará como criar uma imagem Docker com docker commit.
 
-É importante conhecer a existência e seu funcionamento, mas ela não é a mais otimizada. A forma mais otimizada será mostrada no artigo [Criando imagem com DOCKER AAAAAAAAAJEITAR Dockerfile]().
+É importante conhecer a existência e seu funcionamento, mas ela não é a mais otimizada. A forma mais otimizada será mostrada no artigo [02.Otimizando_imagem.md](/Docker/Dockerfile/Exercicios/02.Otimizando_imagem.md).
 
 Desvantagens de se criar uma imagem usando o docker container commit:
 - Muito custoso;

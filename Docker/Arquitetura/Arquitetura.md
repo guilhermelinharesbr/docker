@@ -72,7 +72,7 @@ Antigamente, o Docker executava tudo de forma monolítica. Hoje, a arquitetura �
 
 São os componentes estruturais que manipula-se para construir e rodar as aplicações:
 
-- [Imagens](/Docker/Docker_Commands/docker_image/docker_image.md): Templates imutáveis somente leitura que contêm o código, bibliotecas e dependências.
+- [Imagens](/Docker/Docker_Commands/docker_image/docker_image.md): Templates imutáveis somente leitura que contêm o código, bibliotecas e dependências. As melhores práticas nas criações de imagens pode ser vistas no arquivo [Melhores_praticas_criacao_imagem.md](/Docker/Docker_Tutoriais/Imagens_docker/Melhores_praticas_criacao_imagem.md). 
 - [Containers](/Docker/Docker_Commands/docker_container/docker_container.md): A instância em execução de uma imagem (o processo isolado).
 - [Networks](/Docker/Docker_Commands/docker_network/docker_network.md): O subsistema de rede que permite que containeres se comuniquem entre si e com o mundo exterior de forma isolada.
 - [Volumes](/Docker/Docker_Commands/docker_volume/docker_volume.md): Mecanismo de persistência de dados que desacopla os arquivos do ciclo de vida efêmero do container.
