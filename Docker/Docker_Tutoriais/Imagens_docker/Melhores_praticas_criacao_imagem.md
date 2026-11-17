@@ -106,6 +106,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```yaml
 services:
   api:
+    build: .
     image: minha-api-python:${APP_VERSION:-1.0.0}
     container_name: api-python-segura
     ports:
