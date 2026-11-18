@@ -35,6 +35,8 @@ env
 
 psql -U postgres
 
+\l+
+
 create database nome_base_de_dados
 
 \l+
